@@ -11,7 +11,7 @@
 
     <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
-        
+
 	    <li class="text-center">
         <img src="assets/img/udm.jpg" class="user-image img-responsive"/>
 		</li>
@@ -25,7 +25,7 @@
            <a id="user" href="#"><i class="fa fa-user fa-3x"></i> User Management
             <span class="fa arrow"></span></a>
             <ul class="nav nav-first-level" id="nuser">
-  
+
                 <li>
                     <a class="" id="adduser" href="adduser.php"> * Add User</a>
                 </li>
@@ -36,7 +36,7 @@
                 </li>-->
                 <li>
                     <a class=""  id="edituser" href="edituser.php"> * Search and Edit</a>
-                 <!--   
+                 <!--
                 </li>
                       <li>
                     <a class="" id="addcateg" href="addposition.php">Add New Position</a>
@@ -59,19 +59,17 @@
                                 <li>
                     <a class="" id="addbook" href="addbook.php"> * Add Book</a>
                 </li>
-                <!--
                 <li>
-                    <a class="" id="addcateg" href="addcateg.php">Add New Category</a>
+                    <a class="" id="addcateg" href="addcateg.php"> * Manage Categories</a>
                 </li>
-                -->
                 <li>
                     <a class="" id="editbook" href="editbook.php"> * Search and Update Book</a>
                 </li>
-                
+
                 <li>
                     <a class="" id="unreturned" href="unreturned.php"> * Unreturned Books</a>
                 </li>
-                
+
                 <!--<li>
                     <a class="" id="deletebook" href="managebook.php">Manage Deleted Book</a>
                 </li>-->
@@ -95,7 +93,7 @@
         </li>
         <li>
             <a class="" id="borrow" href="borrow.php"><i class="fa fa-mail-forward fa-3x"></i> Borrow</a>
-        </li>               
+        </li>
         <li>
             <a class="" id="return" href="return.php"><i class="fa fa-mail-reply fa-3x"></i> Return</a>
         </li>
@@ -105,19 +103,19 @@
         <li>
             <a class="" id="reserve" href="reservation.php"><img class="responsive" src="./img/Reservation.png" style="width:20%"; height="auto;">  Manage Reservations</a>
         </li>
-    
+
          <li>
             <a class="" id="userlogs" href="userlogs.php"><img class="responsive" src="./img/userlog.png" style="width:20%"; height="auto;">  User Logs</a>
         </li>
-        
+
       <li>
             <a class="" id="reports" href="reports.php"><i class="fa fa-print fa-3x"></i> Reports</a>
-        </li>   
-     
+        </li>
+
     </ul>
-               
+
 </div>
-            
+
 </nav>
 
 

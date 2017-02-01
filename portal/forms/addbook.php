@@ -17,7 +17,7 @@
                   </div>
                    </td>
                     </tr>
-                    
+
 
   &nbsp;
 
@@ -35,7 +35,7 @@
                          <strong><span class="style6" style="font-size:18px;" >Author's First Name: &nbsp;</span><br /></strong></td>
                         <td> <input class="form-control" name="firstname" id = "firstname" oninput="validateLetters(this.name)"
     onblur="validateInput('firstname', this.value, 'ffirstname')" maxlength = 50>
-   
+
     </div>
 
       <br>
@@ -47,8 +47,8 @@
                          <div class = "form group">
                          <strong><span class="style6" style="visibility: hidden;" >afhal</span><br /></strong></td>
                         <td> <button class = "btn btn-info btn-block" style="width:45;font-size:20px;margin-bottom:20px;" onclick="viewAuthor()">Add Sub-authors</button></td>
-  
-    
+
+
     </div>
 
       <br>
@@ -59,7 +59,7 @@
                         <td scope="col">
                         <div class = "form group" id = "fcopyright">
                         <strong><span class="style6" style="font-size:18px;">Copyright: &nbsp;</span></strong></td>
-                        <td><input class="form-control" style="margin-bottom:10px;" name="copyright" id = "copyright" 
+                        <td><input class="form-control" style="margin-bottom:10px;" name="copyright" id = "copyright"
       onblur="validateInput('copyright', this.value, 'fcopyright')"
       oninput="validateNum(this.name)" maxlength = 4></td>
       </div>
@@ -88,13 +88,13 @@
       <?php
 
   include_once('../connection.php');
-  
+
   $sql = $conn->query("SELECT * FROM tb_category");
   while(($row=$sql->fetch_assoc())==true){
 
     ?>
     <option value="<?php echo $row['category']; ?>"><?php echo $row['category']; ?></option>
-    <?php } 
+    <?php }
     ?>
 
     </select></td></div>
@@ -103,7 +103,7 @@
                         <td scope="col">
                         <div class = "form group"  id = "fcopy">
                         <strong><span class="style6" style="font-size:18px;">Copies: &nbsp;</span></strong></td>
-                        <td><input class="form-control" style="margin-bottom:10px;" name="copies" id = "copies" 
+                        <td><input class="form-control" style="margin-bottom:10px;" name="copies" id = "copies"
       onblur="validateInput('copies', this.value, 'fcopy')"
       oninput="validateNum(this.name)" maxlength = "4"></td></div>
                     </tr>
@@ -111,7 +111,7 @@
                         <td scope="col">
                            <div class = "form group"  id = "fedition">
                         <strong><span class="style6" style="font-size:18px;">Edition: &nbsp;</span></strong></td>
-                        <td> <input class="form-control" style="margin-bottom:10px;" name="edition" id = "edition" 
+                        <td> <input class="form-control" style="margin-bottom:10px;" name="edition" id = "edition"
         onblur="validateInput('edition', this.value, 'fedition')"
         oninput="validateAlphaNumer(this.name)" maxlength = "100"></td></div>
                     </tr>
@@ -135,7 +135,7 @@
                         <td scope="col">
                            <div class = "form group" id = "fisbn">
                         <strong><span class="style6" style="font-size:18px;">ISBN: &nbsp;</span></strong></td>
-                        <td><input class="form-control" style="margin-bottom:10px;" name="isbn" id = "isbn" 
+                        <td><input class="form-control" style="margin-bottom:10px;" name="isbn" id = "isbn"
       onblur="validateInput('isbn', this.value, 'fisbn')"
     maxlength = "50"></td></div>
                     </tr>
@@ -143,7 +143,7 @@
                         <td scope="col">
                            <div class = "form group" id = "fpublisher">
                         <strong><span class="style6" style="font-size:18px;">Publisher: &nbsp;</span></strong></td>
-                        <td><input class="form-control" style="margin-bottom:10px;" name="publisher" id = "publisher" 
+                        <td><input class="form-control" style="margin-bottom:10px;" name="publisher" id = "publisher"
         onblur="validateInput('publisher', this.value, 'fpublisher')"
         oninput="validateAlphaNumer(this.name)" maxlength = "100"></td></div>
                     </tr>
@@ -151,28 +151,28 @@
                         <td scope="col">
                            <div class = "form group"  id = "fcategory">
                         <strong><span class="style6" style="font-size:18px;">Category: &nbsp;</span></strong></td>
-                        <td><select class ="form-control" style="margin-bottom:10px;" style="height:50px;" id = "category" 
+                        <td><select class ="form-control" style="margin-bottom:10px;" style="height:50px;" id = "category"
         onblur="validateSelect('category', this.value, 'fcategory')">
 
          <?php
 
   include_once('../connection.php');
-  
+
   $sql = $conn->query("SELECT * FROM tb_categoryy");
   while(($row=$sql->fetch_assoc())==true){
 
     ?>
-    <option value="<?php echo $row['bkcategory']; ?>"><?php echo $row['bkcategory']; ?></option>
-    <?php } 
+    <option value="<?php echo $row['category']; ?>"><?php echo $row['category']; ?></option>
+    <?php }
     ?>
-            
+
         </select></td></div>
                     </tr>
                           <tr>
                         <td scope="col">
                             <div class = "form group" id = "fseries">
                         <strong><span class="style6" style="font-size:18px;">Series: &nbsp;</span></strong></td>
-                        <td> <input class="form-control" style="margin-bottom:10px;" name="series" id = "series" 
+                        <td> <input class="form-control" style="margin-bottom:10px;" name="series" id = "series"
         onblur="validateInput('series', this.value, 'fseries')"
         oninput="validateAlphaNumer(this.name)" maxlength = 10></td></div>
                     </tr>
@@ -180,7 +180,7 @@
                         <td scope="col">
                                <div class = "form group"  id = "fvol">
                         <strong><span class="style6" style="font-size:18px;">Volume: &nbsp;</span></strong></td>
-                        <td><input class="form-control" style="margin-bottom:10px;" name="vol" id = "vol" 
+                        <td><input class="form-control" style="margin-bottom:10px;" name="vol" id = "vol"
         onblur="validateInput('vol', this.value, 'fvol')"
         oninput="validateAlphaNumer(this.name)" maxlength = 50></td></div>
                     </tr>
@@ -188,7 +188,7 @@
                         <td scope="col">
                         <div class = "form group" id = "fplaceofpub">
                         <strong><span class="style6" style="font-size:18px;">Place of Publication: &nbsp;</span></strong></td>
-                        <td><input class="form-control" style="margin-bottom:10px;" name="placeofpub" id = "placeofpub" 
+                        <td><input class="form-control" style="margin-bottom:10px;" name="placeofpub" id = "placeofpub"
         onblur="validateInput('placeofpub', this.value, 'fplaceofpub')"
         oninput="validateAlphaNumer(this.name)" maxlength = 100></td></div>
                     </tr>
@@ -196,7 +196,7 @@
                         <td scope="col">
                            <div class = "form group"  id = "fmater">
                         <strong><span class="style6" style="font-size:18px;">Materials Specific Details: &nbsp;</span></strong></td>
-                        <td> <input class="form-control" style="margin-bottom:10px;" name="mater" id = "mater" 
+                        <td> <input class="form-control" style="margin-bottom:10px;" name="mater" id = "mater"
         onblur="validateInput('mater', this.value, 'fmater')"
         oninput="validateAlphaNumer(this.name)" maxlength = 100></td></div>
                     </tr>
@@ -205,7 +205,7 @@
                         <td scope="col">
                            <div class = "form group"  id = "fnotearea">
                         <strong><span class="style6" style="font-size:18px;">Note Area: &nbsp;</span></strong></td>
-                        <td> <input class="form-control" style="margin-bottom:10px;" name="notearea" id = "notearea" 
+                        <td> <input class="form-control" style="margin-bottom:10px;" name="notearea" id = "notearea"
         onblur="validateInput('notearea', this.value, 'fnotearea')"
         oninput="validateAlphaNumer(this.name)" maxlength = 100></td></div>
                     </tr>
@@ -233,7 +233,7 @@
   <div class="col-md-3">
        <button class="btn btn-default btn-block" style="width:55%;font-size:20px;" onclick = "save()">Add Book</button>
   </div>
-    
+
 
     <div class="col-md-3">
         <button class="btn btn-default btn-block" type="button" style="width:55%;font-size:20px;" onclick="ClearFields();">Cancel</button>
@@ -249,7 +249,7 @@
       data: {},
       success: function(data){
         $("#e").html(data);
-              
+
       }
     });
     $('#subauthors').modal('show');
@@ -274,12 +274,12 @@
     if (fname=="" || lname ==""){
       validateInput('autfname', fname, 'divautfname');
       validateInput('autlname', lname, 'divautlname');
-      
+
       $('#allfields').modal('show');
     }
     else{
       $.ajax({
-      
+
         url: "ajax/insert/addsub.php",
         type: 'POST',
         data: {type: fname, type1: lname},
@@ -348,7 +348,7 @@
       var num = Math.floor(Math.random() * 9000) + 1000;
       num = "nO-bc-" + num;
       $.ajax({
-      
+
         url: "ajax/insert/addbook.php",
         type: 'POST',
         data: {type: title, type1: fname, type2: lname, type3: copyright,
@@ -410,7 +410,7 @@
 
 
   function closes(){
-    
+
     $('#addalert').modal('hide');
     $('#auser').modal('hide');
   }
