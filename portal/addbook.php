@@ -10,16 +10,16 @@
 </head>
 <body onload="setLink('Add Book')">
     <div id="wrapper">
-        
-      
+
+
                 <?php
                   include_once('includes/header.php')
-                ?>  
-        
+                ?>
+
            <!-- /. NAV TOP  -->
         <?php
             include_once('includes/nav.php')
-        ?>  
+        ?>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper">
             <div id="page-inner">
@@ -28,11 +28,9 @@
                 ?>
                  <!-- /. ROW  -->
                  <hr />
-                 
+
                 <?php
                     include_once('ajax/connection.php');
-                    $sql = $conn->query("DROP TABLE haha");
-                    $sql = $conn->query("CREATE TABLE haha (fname varchar(50), lname varchar(50))");
 
                     include_once('forms/addbook.php');
                     include_once('modals/subauthors.php');
@@ -43,7 +41,7 @@
                     include_once('modals/contact.php');
                 ?>
 
-                
+
             </div>
              <!-- /. PAGE INNER  -->
         </div>
@@ -52,14 +50,14 @@
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    
+
 
     <?php
       include_once('includes/scripts.php')
     ?>
 
     <script>
-    
+
 </script>
 </body>
 </html>
