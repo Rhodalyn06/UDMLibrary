@@ -1,9 +1,9 @@
 <?php
-    date_default_timezone_set('Singapore');
-    $servername = "localhost";
-    $username = "root";
-    $pass = "";
-    $dbname = "dblibsys";
+    date_default_timezone_set('Asia/Manila');
+    $servername = $_ENV['DB_HOST'] ?: "localhost";
+    $username = $_ENV['DB_USER'] ?: "root";
+    $pass = $_ENV['DB_PASS'] ?: null;
+    $dbname = $_ENV['DB_NAME'] ?: "dblibsys";
     $conn = mysqli_connect($servername, $username, $pass, $dbname);
     // Check connection
     if (!$conn) {
