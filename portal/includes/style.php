@@ -15,28 +15,6 @@
 <!-- TABLE STYLES-->
 <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
 <style type="text/css">
-	label{
-  font-size: 30px;
-}
-
-
-	.btn{
-		font-size: 30px;
-	}
-
-	.form-control{
-		font-size: 15px;
-		height: 40px;
-	}
-
-	table{
-		font-size: 20px;
-	}
-
-	.panel-heading{
-		font-size: 40px;
-		font-weight: bold;
-	}
 
 	.opac { 
       text-align: center;
