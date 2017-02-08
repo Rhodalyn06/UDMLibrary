@@ -29,7 +29,7 @@
                  <hr />
                <div class = "form-group">
                 <label>Report Type</label>
-                <select class = "form-control" style="height:50px;" id = "type">
+                <select class = "form-control" style="height:50px; width:50%;" id = "type">
                   <option value = "bookinventory">Book Inventory</option>
                   <option value = "unborrowedbooks">List of Unborrowed Books</option>
                   <option value = "newlyacquiredbooks">List of Newly Acquired Books</option>
@@ -45,16 +45,24 @@
                   <option value = "userlogs">List of userlogs</option>
                   <option value = "systemusers">List of system users</option>
                 </select>
-                <label>From</label>
-                <input type = "date" class="form-control" id = "from"/>
-                <label>To</label>
-                <input type = "date" class = "form-control" id = "to"/><br/>
-                <div class="row">
-                <div class="col-md-6">
-                <button class = "btn btn-default btn-block" onclick="generate()">Generate</button>
-                </div>
-                </div>
+                <br>
+                <label style="font-size:20px;">From</label>
+                <input type = "date" class="form-control" style="width:50%;" id = "from"/>
+                <label style="font-size:20px;">To</label>
+                <input type = "date" class = "form-control" style="width:50%;" id = "to"/><br/>
                </div>
+
+                <div class="row">
+  <div class="col-md-3">
+      <button class = "btn btn-default btn-block" style="width:40%;font-size:20px;" onclick="generate()">Generate</button>
+  </div>
+    
+
+    <div class="col-md-3">
+        <button class="btn btn-default btn-block" type="button" style="width:40%;font-size:20px;" onclick="ClearFields();">Cancel</button>
+
+    </div>
+</div>
     </div>
              <!-- /. PAGE INNER  -->
             </div>
@@ -71,6 +79,14 @@
         //alert(to);
         window.open("ajax/reports/"+type+".php?from="+froms+"&to="+to);
       }
+
+      function ClearFields() {
+
+     document.getElementById("from").value = "";
+     document.getElementById("to").value = "";
+ 
+}
+
     </script>
 
     <script src="assets/js/jquery-1.10.2.js"></script>

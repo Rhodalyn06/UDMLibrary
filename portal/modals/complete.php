@@ -10,8 +10,8 @@
                 Do you really want to complete transaction?    
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" onclick="compNo()">No</button>
-                <button type="button" class="btn btn-success" onclick="compYes()"><span class="glyphicon glyphicon-thumbs-up"></span>  Yes</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" onclick="compNo()">Cancel</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-success" onclick="compYes()">Yes</button>
             </div>
         </div>
     </div>

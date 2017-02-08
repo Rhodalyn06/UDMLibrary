@@ -39,8 +39,8 @@
         </div>
         </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success" onclick="addSub()">Add Sub-Authors</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-success" onclick="addSub()">Add Sub-Authors</button>
             </div>
         </div>
     </div>

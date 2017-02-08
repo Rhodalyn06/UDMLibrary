@@ -35,14 +35,27 @@
                  <div class="form-group">
                     <div class="row">
                       <div class="col-md-4">
-                  <label>Penalty Price</label>
+                  <label style="font-size:20px;">Penalty Price</label>
                   <input style="text-align:center;" class="form-control" id="oldPrice" disabled/>
-                  <label>New Penalty Price</label>
-                  <input style="text-align:center;" class="form-control" id="newPrice"/><br/>
-                  <button type="button" class = "btn btn-default btn-block"onclick="changePrice()">Submit
+                  <label style="font-size:20px;">New Penalty Price</label>
+                  <input style="text-align:center;" class="form-control" id="newPrice"/><br/>                
                   </button>
                   </div>
                 </div>
+
+
+ <div class="row">
+  <div class="col-md-3">
+<button type="button" class = "btn btn-default btn-block"onclick="changePrice()">Submit
+  </div>
+    
+
+    <div class="col-md-3">
+        <button class="btn btn-default btn-block type="button" onclick="ClearFields();">Cancel</button>
+
+    </div>
+</div>
+
               </div>
                
     </div>
@@ -158,6 +171,14 @@
         });
       }
     }
+
+    function ClearFields() {
+
+     document.getElementById("newPrice").value = "";
+ 
+     
+}
+
     </script>
    
 </body>

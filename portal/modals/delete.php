@@ -7,11 +7,11 @@
                 <h4 class="modal-title" id="myModalLabel">ALERT</h4>
             </div>
             <div class="modal-body">
-                Do you really want to delete this record?    
+                Do you really want to Settle this record?    
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" onclick="dNo()">No</button>
-                <button type="button" class="btn btn-success" onclick="dYes()"><span class="glyphicon glyphicon-thumbs-up"></span> Yes</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" onclick="dNo()">Cancel</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-success" onclick="dYes()">Yes</button>
             </div>
         </div>
     </div>

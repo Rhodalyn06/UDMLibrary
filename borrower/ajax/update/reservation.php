@@ -4,7 +4,7 @@
 	$id = $_POST['type'];
 
 
-	$sql = $conn->query("UPDATE tb_reservation SET Status='Claimed' WHERE ReservationID='$id'");
+	$sql = $conn->query("UPDATE tb_reservation SET Status='Borrowed' WHERE ReservationID='$id'");
 
 	if ($sql){
 		$sql = $conn->query("SELECT * FROM tb_reservation WHERE ReservationID = '$id'");

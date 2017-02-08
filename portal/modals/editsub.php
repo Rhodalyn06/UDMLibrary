@@ -10,9 +10,9 @@
                     
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" onclick="closes()">Close</button>
-                <button type="button" class="btn btn-info" onclick="save()"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
-                <button type="button" class="btn btn-danger" onclick="save()"><span class="glyphicon glyphicon-remove"></span> Delete</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" onclick="closes()">Cancel</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-info" onclick="save()">Edit</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-danger" onclick="save()">Delete</button>
             </div>
         </div>
     </div>

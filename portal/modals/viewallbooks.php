@@ -48,9 +48,9 @@
                     
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" onclick="closeViewAllBook()">Close</button>
-                <button type="button" class="btn btn-success" onclick="addbook()">Add</button>
-                <button type="button" id = "btnDel"class="btn btn-danger" disabled> Delete</button> 
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" onclick="closeViewAllBook()">Cancel</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-success" onclick="addbook()">Add</button></br></br>
+                <button type="button" style="width:40%;font-size:20px;" id = "btnDel" class="btn btn-danger" disabled> Weed</button> 
             </div>
         </div>
     </div>

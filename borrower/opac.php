@@ -74,9 +74,9 @@
         <div class="row">
                   <div class="col-md-12">
                     <!-- Advanced Tables -->
-                    <div class="panel panel-green">
+                    
                         <div class="panel-heading">
-                           Online OPAC
+                       OPAC
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -95,6 +95,9 @@
                                                             <th>
                                                               Category
                                                             </th>
+                                                              <th>
+                                                              Location
+                                                            </th>
                                                             <th>
                                                               Status
                                                             </th>
@@ -108,7 +111,7 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                        </div>
+                                        
                
     </div>
              <!-- /. PAGE INNER  -->
@@ -137,6 +140,8 @@
         var select3 = $('#select3').val();
     var opt1 = $('#opt1').val();
     var opt2 = $('#opt2').val();
+
+    
         $.ajax({
 
             url: "ajax/view/opac.php",

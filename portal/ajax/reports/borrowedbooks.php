@@ -24,7 +24,7 @@ th {
 	<title>List of Borrowed Books</title>
 	<div class = "col-xs-12">
 		<center>
-			<img src = "../../img/udm.jpg">
+			<img src = "../../img/udm.jpg" height="200px;">
 		</center>
 	</div>
 	<div class = "col-xs-12" style = "font-size:30px">
@@ -67,7 +67,7 @@ th {
 			if ($f == 1){
 
 			}else{
-				echo "<tr align='center' style='font-size: 20px;'>";
+				echo "<tr align='center' >";
 				echo "<td rowspan='$f'>" . $row["Barcode"] . "</td>";
 				echo "<td rowspan='$f'>" . $row["CopyRight"] . "</td>";
 				echo "<td  rowspan='$f'>" . $row["Title"] . "</td>";

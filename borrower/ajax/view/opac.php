@@ -51,6 +51,7 @@
 		$author = $row['Author'] . " " . $row['Lastname'];
 		$edition = $row['Edition'];
 		$category = $row['Category'];
+		$loc = $row['location'];
 
 		$id = $row['AcquisitionId'];
 		$avail = mysqli_num_rows($conn->query("Select * from tb_book WHERE AcquisitionId='$id' and Status='Available'"));
@@ -92,6 +93,7 @@
 		echo "<td>$author</td>";
 		echo "<td>$edition</td>";
 		echo "<td>$category</td>";
+		echo "<td>$loc</td>";
 		echo "<td>$x</td>";
 		echo "</tr>";
 

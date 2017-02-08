@@ -10,7 +10,7 @@
                 All fields are required! Please fill up all fields!    
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" style="width:40%;font-size:20px;" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

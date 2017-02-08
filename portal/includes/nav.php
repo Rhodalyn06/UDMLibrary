@@ -15,27 +15,40 @@
 	    <li class="text-center">
         <img src="assets/img/udm.jpg" class="user-image img-responsive"/>
 		</li>
-        
+        <!--
       <li>
             <a class="" id="index" href ="index.php">
             <i class="fa fa-dashboard fa-3x"></i> Home</a>
         </li>
-        
+        -->
         <li>
            <a id="user" href="#"><i class="fa fa-user fa-3x"></i> User Management
             <span class="fa arrow"></span></a>
             <ul class="nav nav-first-level" id="nuser">
+  
                 <li>
-                    <a class="" id="adduser" href="adduser.php">Add User</a>
+                    <a class="" id="adduser" href="adduser.php"> * Add User</a>
                 </li>
+
+                <!--
+                   <li>
+                    <a class="" id="adduser" href="addlibrarian.php">Add Lib</a>
+                </li>-->
                 <li>
-                    <a class=""  id="edituser" href="edituser.php">Search and Edit</a>
+                    <a class=""  id="edituser" href="edituser.php"> * Search and Edit</a>
+                 <!--   
                 </li>
+                      <li>
+                    <a class="" id="addcateg" href="addposition.php">Add New Position</a>
+                </li>
+                -->
+                <!--
                 <li>
                     <a class=""  id="deleteuser" href="manageuser.php">Manage Deleted Users</a>
                 </li>
+                -->
                 <li>
-                    <a class="" id="password" href="password.php"><i class="fa fa-print fa-3x"></i> Change Password</a>
+                    <a class="" id="password" href="password.php"> * Change Password</a>
                 </li>
             </ul>
         </li>
@@ -44,7 +57,7 @@
             <span class="fa arrow"></span></a>
             <ul class="nav nav-first-level collapse" id="nbook">
                                 <li>
-                    <a class="" id="addbook" href="addbook.php">Add Book</a>
+                    <a class="" id="addbook" href="addbook.php"> * Add Book</a>
                 </li>
                 <!--
                 <li>
@@ -52,11 +65,11 @@
                 </li>
                 -->
                 <li>
-                    <a class="" id="editbook" href="editbook.php">Search and Update Book</a>
+                    <a class="" id="editbook" href="editbook.php"> * Search and Update Book</a>
                 </li>
                 
                 <li>
-                    <a class="" id="unreturned" href="unreturned.php">Unreturned Books</a>
+                    <a class="" id="unreturned" href="unreturned.php"> * Unreturned Books</a>
                 </li>
                 
                 <!--<li>
@@ -70,10 +83,10 @@
             <span class="fa arrow"></span></a>
             <ul class="nav nav-first-level collapse" id="nholiday">
                 <li>
-                    <a class="" id="addholiday" href="addsuspension.php">Add Suspension</a>
+                    <a class="" id="addholiday" href="addsuspension.php"> * Add Suspension</a>
                 </li>
                 <li>
-                    <a class="" id="editholiday" href="editsuspension.php">Search Suspension & Event</a>
+                    <a class="" id="editholiday" href="editsuspension.php"> * Search Suspension & Event</a>
                 </li>
                 <!--<li>
                     <a class="" id="deletebook" href="managebook.php">Manage Deleted Book</a>
@@ -87,23 +100,19 @@
             <a class="" id="return" href="return.php"><i class="fa fa-mail-reply fa-3x"></i> Return</a>
         </li>
          <li>
-            <a class="" id="penalty" href="penalty.php"><i class="fa fa-print fa-3x"></i> Change Penalty Price</a>
+            <a class="" id="penalty" href="penalty.php"><img class="responsive" src="./img/changepenalty.png" style="width:20%"; height="auto;"> Change Penalty Price</a>
         </li>
         <li>
-            <a class="" id="reserve" href="reservation.php"><i class="fa fa-print fa-3x"></i> Manage Reservations</a>
+            <a class="" id="reserve" href="reservation.php"><img class="responsive" src="./img/Reservation.png" style="width:20%"; height="auto;">  Manage Reservations</a>
         </li>
     
          <li>
-            <a class="" id="userlogs" href="userlogs.php"><i class="fa fa-print fa-3x"></i> User Logs</a>
+            <a class="" id="userlogs" href="userlogs.php"><img class="responsive" src="./img/userlog.png" style="width:20%"; height="auto;">  User Logs</a>
         </li>
         
       <li>
             <a class="" id="reports" href="reports.php"><i class="fa fa-print fa-3x"></i> Reports</a>
         </li>   
-     
-        <li>
-        <a href="ajax/logouts.php" class=""><i class="fa fa-sign-out fa-3x"></i> Logout</a> </div>
-        </li>
      
     </ul>
                

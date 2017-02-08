@@ -17,6 +17,8 @@
 	$price = $row['Price'];
 	$bkcateg = $row['Category'];
 	$accno = $row['AccessionNum'];
+	$pubb = $row['Publisher'];
+
 
 	$sql = $conn->query("SELECT * FROM tb_book WHERE AcquisitionId='$id'");
 
@@ -24,78 +26,90 @@
 
 	$isbn = $row['ISBN'];
 	$sub = $row['SubAuthors'];
+	$desk = $row['Description'];
 	echo "<div class=\"form-group\">";
-	echo "<label>Barcode</label>";
-	echo "<input class=\"form-control\" value=\"$barcode\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Barcode</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$barcode\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Acquisition ID</label>";
-	echo "<input class=\"form-control\" value=\"$id\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Acquisition ID</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$id\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Call Number</label>";
-	echo "<input class=\"form-control\" value=\"$callno\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Call Number</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$callno\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Title</label>";
-	echo "<input class=\"form-control\" value=\"$title\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Title</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$title\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Author's Last name</label>";
-	echo "<input class=\"form-control\" value=\"$lname\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Author's Last name</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$lname\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Author's First Name</label>";
-	echo "<input class=\"form-control\" value=\"$fname\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Author's First Name</label>";
+	echo "<input class=\"form-control\"  style=\"width:40%;font-size:15px;\" value=\"$fname\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Sub Authors</label>";
-	echo "<input class=\"form-control\" value=\"$sub\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Sub Authors</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$sub\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Edition</label>";
-	echo "<input class=\"form-control\" value=\"$edition\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Edition</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$edition\" disabled/>";
+	echo "</div>";
+
+
+	echo "<div class=\"form-group\">";
+	echo "<label style=\"font-size:15px;\">Publisher</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$pubb\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Copyright</label>";
-	echo "<input class=\"form-control\" value=\"$copyright\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Copyright</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$copyright\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Number of Copies</label>";
-	echo "<input class=\"form-control\" value=\"$copy\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Number of Copies</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$copy\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>ISBN</label>";
-	echo "<input class=\"form-control\" value=\"$isbn\" disabled/>";
+	echo "<label style=\"font-size:15px;\">ISBN</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$isbn\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Acquisition Method</label>";
-	echo "<input class=\"form-control\" value=\"$method\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Acquisition Method</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$method\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Price</label>";
-	echo "<input class=\"form-control\" value=\"$price\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Price</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$price\" disabled/>";
 	echo "</div>";
 	
 	echo "<div class=\"form-group\">";
-	echo "<label>Category</label>";
-	echo "<input class=\"form-control\" value=\"$bkcateg\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Category</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$bkcateg\" disabled/>";
 	echo "</div>";
 
 	echo "<div class=\"form-group\">";
-	echo "<label>Accession Number</label>";
-	echo "<input class=\"form-control\" value=\"$accno\" disabled/>";
+	echo "<label style=\"font-size:15px;\">Accession Number</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$accno\" disabled/>";
+	echo "</div>";
+
+	echo "<div class=\"form-group\">";
+	echo "<label style=\"font-size:15px;\">Description</label>";
+	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$desk\" disabled/>";
 	echo "</div>";
 ?>

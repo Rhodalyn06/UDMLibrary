@@ -10,8 +10,8 @@
                 Do you really want to add this book on books to be borrowed?    
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" onclick="no()">No</button>
-                <button type="button" class="btn btn-success" onclick="yes()"> Yes</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" onclick="no()">Cancel</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-success" onclick="yes()"> Yes</button>
             </div>
         </div>
     </div>

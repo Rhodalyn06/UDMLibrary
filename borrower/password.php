@@ -26,8 +26,9 @@
           
                  <hr />
 
-       
-
+  
+                 <div class="row">
+                 <div class="col-md-6">
                  <div class="form-group">
                   <label>Old Password</label>
                   <input class="form-control" type = "password" id="oldPass"/>
@@ -35,9 +36,16 @@
                   <input class="form-control" type = "password" id="newPass"/>
                   <label>Confirm Password</label>
                   <input class="form-control" type = "password" id="confirmPass"/><br/>
-                  <button type="button" class = "btn btn-outline btn-success btn-block"onclick="changePw()"><span class="glyphicon glyphicon-send"> </span> Submit
+
+                  <div class="row">
+                  <div class="col-md-4">
+                  <button type="button" class = "btn btn-default btn-block"onclick="changePw()">Submit
                   </button>
                   </div>
+                  </div>
+                  </div>
+                 </div>
+                 </div>
     </div>
              <!-- /. PAGE INNER  -->
             </div>

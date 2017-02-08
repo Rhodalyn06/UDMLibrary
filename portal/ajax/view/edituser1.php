@@ -12,24 +12,26 @@
 		$userid = $row['UserName'];
 		$fname = $row['FirstName'];
 		$lname = $row['LastName'];
+		$postion = $row['position'];
+
 		echo "<div class=\"form-group\">";
-		echo "<label>User ID</label>";
-		echo "<input class = \"form-control\" id = 'userid' value=\"$userid\" disabled>";
+		echo "<label style=\"font-size:15px;\">User ID</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" id = 'userid' value=\"$userid\" disabled>";
 		echo "</div>";
 
 		echo "<div class=\"form-group\">";
-		echo "<label>First Name</label>";
-		echo "<input class = \"form-control\" value=\"$fname\" disabled>";
+		echo "<label style=\"font-size:15px;\">First Name</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$fname\" disabled>";
 		echo "</div>";
-         
-		/*echo "<div class=\"form-group\">";
-		echo "<label>Middle Name</label>";
-		echo "<input class = \"form-control\" value=\"$middilename\" disabled>";
-		echo "</div>";
-		*/
+
 		echo "<div class=\"form-group\">";
-		echo "<label>Last Name</label>";
-		echo "<input class = \"form-control\" value=\"$lname\" disabled>";
+		echo "<label style=\"font-size:15px;\">Last Name</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$lname\" disabled>";
+		echo "</div>";
+
+		echo "<div class=\"form-group\">";
+		echo "<label style=\"font-size:15px;\">Position</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$postion\" disabled>";
 		echo "</div>";
 
 	}
@@ -38,52 +40,49 @@
 		$row = $sql->fetch_assoc();
 		$userid = $row['UserID'];
 		$fname = $row['FirstName'];
-		
+		$pasx = $row['Password'];
 		$lname = $row['LastName'];
 		$BorrowerType = $row['BorrowerType'];
-		$ContactNo = $row['ContactNo'];
-		$Birthday = $row['Birthday'];
+
 		$Address = $row['Address'];
 		$middilename = $row['middilename'];
 		
 		echo "<div class=\"form-group\">";
-		echo "<label>User ID</label>";
-		echo "<input class = \"form-control\" id = 'userid' value=\"$userid\" disabled>";
+		echo "<label style=\"font-size:15px;\">User ID</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" id = 'userid' value=\"$userid\" disabled>";
+		echo "</div>";
+
+
+		echo "<div class=\"form-group\">";
+		echo "<label style=\"font-size:15px;\">Password</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$pasx\" disabled>";
+		echo "</div>";
+
+
+		echo "<div class=\"form-group\">";
+		echo "<label style=\"font-size:15px;\">First Name</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$fname\" disabled>";
 		echo "</div>";
 
 		echo "<div class=\"form-group\">";
-		echo "<label>First Name</label>";
-		echo "<input class = \"form-control\" value=\"$fname\" disabled>";
-		echo "</div>";
-
-		echo "<div class=\"form-group\">";
-		echo "<label>Middle Name</label>";
-		echo "<input class = \"form-control\" value=\"$middilename\" disabled>";
+		echo "<label style=\"font-size:15px;\">Middle Initial (Optional)</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$middilename\" disabled>";
 		echo "</div>";
 		
 		echo "<div class=\"form-group\">";
-		echo "<label>Last Name</label>";
-		echo "<input class = \"form-control\" value=\"$lname\" disabled>";
+		echo "<label style=\"font-size:15px;\">Last Name</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$lname\" disabled>";
 		echo "</div>";
 
 		echo "<div class=\"form-group\">";
-		echo "<label>Borrower Type</label>";
-		echo "<input class = \"form-control\" value=\"$BorrowerType\" disabled>";
+		echo "<label style=\"font-size:15px;\">Borrower Type</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$BorrowerType\" disabled>";
 		echo "</div>";
 
-		echo "<div class=\"form-group\">";
-		echo "<label>Contact Number</label>";
-		echo "<input class = \"form-control\" value=\"$ContactNo\" disabled>";
-		echo "</div>";
 
 		echo "<div class=\"form-group\">";
-		echo "<label>Birthday</label>";
-		echo "<input class = \"form-control\" value=\"$Birthday\" disabled>";
-		echo "</div>";
-
-		echo "<div class=\"form-group\">";
-		echo "<label>Address</label>";
-		echo "<input class = \"form-control\" value=\"$Address\" disabled>";
+		echo "<label style=\"font-size:15px;\">Address</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$Address\" disabled>";
 		echo "</div>";
 
 		

@@ -18,19 +18,19 @@ body {
 
  #wrapper {
     width: 100%;
-    background:#ffffff;
+    background:#fff;
 }
 
 #page-wrapper {
     padding: 15px 15px;
     min-height: 600px;
-    background:#F3F3F3;
+    background:#649173;
    
 }
 #page-inner {
     width:100%;
     margin:10px 20px 10px 0px;
-    background-color:#fff!important;
+    background-color:#649173!important;
     padding:10px;
     min-height:1200px;
 }
@@ -39,7 +39,7 @@ body {
     text-align:center;
 }
 .no-boder {
-    border:1px solid #f3f3f3;
+    border:1px solid #fff;
 }
 h2 {
     color: #33CC33;
@@ -63,7 +63,7 @@ p {
    DASHBOARD STYLES    
     =============================================*/
 .panel-back {
-    background-color:#F8F8F8;
+    background-color:#649173;
 
 }
    .noti-box {
@@ -142,7 +142,7 @@ font-size: 40px;
       -webkit-border-radius: 0px;
 -moz-border-radius: 0px;
 border-radius: 0px;
-background-color:#33CC33;
+background-color:#649173;
 color:#fff;
 }
     .back-dash p {
@@ -207,7 +207,7 @@ max-width:170px;
 
 .navbar-cls-top .navbar-brand {
 	color: #fff;
-background: #33CC33;
+background: #fff;
 width: 260px;
 text-align: center;
 height: 60px;
@@ -215,7 +215,7 @@ font-size: 30px;
 font-weight: 700;
 }
 .active-menu {
-    background-color:#00CC00!important;
+    background-color:#fff!important;
 }
 
 .arrow {
@@ -251,7 +251,7 @@ font-weight: 700;
 }
 .sidebar-collapse .nav > li > a {
 	color:#000;
-	background:#ffffff;
+	background:#fff;
 	text-shadow:none;
 	
 }
@@ -276,7 +276,7 @@ font-weight: 700;
 	left:20px;
 	width:15px;
 	height:1px;
-	background:#33CC33;
+	background:#649173;
 	top:20px;
 }
 .nav-second-level > li > a:after,
@@ -287,7 +287,7 @@ font-weight: 700;
 	left:20px;
 	width:1px;
 	height:100%;
-	background:#33CC33;
+	background:#649173;
 	top:0px;
 	z-index:10;
 }
@@ -301,23 +301,23 @@ font-weight: 700;
 }
 .navbar-side {
 	border:none;
-	background-color: #ffffff;
+	background-color: #fff;
 	
 }
 .navbar-cls-top {
-	background:#ffffff;
+	background:#fff;
 	border-bottom:none;
 	
 }
 .navbar-cls-top .navbar-brand:hover {
 
-background: #fff;
-color:#fff;
+background: #649173;
+color:#649173;
 
 }
 
 .navbar-default {
-border:0px solid black;
+border:0px solid #649173;
      
 }
 .navbar-header {
@@ -331,7 +331,7 @@ border-color: #fff;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-background-color: #FFF;
+background-color: #fff;
 }
 .nav > li > a > i {
     margin-right:10px;

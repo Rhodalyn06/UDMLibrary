@@ -8,7 +8,7 @@
 <div class="row form-group">
   <div class="col-md-6">
     <div class = "form group" id = "fhname">
-      <label>Holiday Name</label>
+      <label style="font-size:18px;">Holiday Name</label>
       <input class="form-control" name="hname" id = "hname" 
       oninput="validateAlphaNumer(this.name)"
       onblur="validateInput('hname', this.value, 'fhname')">
@@ -18,21 +18,25 @@
 <div class="row form-group">
   <div class="col-md-6">
     <div class = "form group" id = "fhdate">
-      <label>Holiday Date</label>
+      <label style="font-size:18px;">Holiday Date</label>
       <input class="form-control" name="hdate" id = "hdate" type="date"
       onblur="validateInput('hdate', this.value, 'fhdate')">
     </div>
   </div>
 </div>
-<div class="row form-group">
-  <div class="col-md-6">
-    <div class = "form group">
-      <button type="button" class = "btn btn-default btn-block" onclick="addHoliday()">Add Holiday</button>
-    </div>
+
+
+ <div class="row">
+  <div class="col-md-3">
+    <button type="button" style="width:40%;font-size:20px;" class = "btn btn-default btn-block" onclick="addHoliday()">Add Date</button>
   </div>
+    
+
+    <div class="col-md-3">
+        <button class="btn btn-default btn-block"  type="button" style="width:40%;font-size:20px;" onclick="ClearFields();">Cancel</button>
+
+    </div>
 </div>
-
-
 
 <script>
 
@@ -78,6 +82,12 @@ function validateInput(str, str1, str2){
     }
   }
 
+function ClearFields() {
+
+     document.getElementById("hname").value = "";
+     document.getElementById("hdate").value = "";
+     
+}
 
 
 </script>

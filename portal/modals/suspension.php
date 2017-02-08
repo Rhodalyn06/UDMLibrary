@@ -10,8 +10,8 @@
                     
             </div>
             <div class="modal-footer">
-                <button type="close" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success" onclick="save()"><span class="glyphicon glyphicon-saved"> </span> Save Changes</button>
+                <button type="close" style="width:40%;font-size:20px;" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-success" onclick="save()">Save</button>
 
             </div>
         </div>

@@ -20,14 +20,15 @@
     $placeofpub = clean($_POST['type17']);
     $mater = clean($_POST['type18']);
     $notearea = clean($_POST['type19']);
+    $location = clean($_POST['type20']);
     
 
 
 
     $sql = $conn->query("INSERT into tb_acquisition 
-    (AcquisitionId, Barcode, Title, Author, LastName, CopyRight, Edition, CallNo, AcquisitionMet, NoOfCopies, Price, Publisher, Category, AccessionNum, Series, Volume, Placeofpub, Mater, Notearea)
+    (AcquisitionId, Barcode, Title, Author, LastName, CopyRight, Edition, CallNo, AcquisitionMet, NoOfCopies, Price, Publisher, Category, AccessionNum, Series, Volume, Placeofpub, Mater, Notearea, location)
 
-    VALUES ('null', '$barcode', '$title', '$fname', '$lname', '$copyright', '$edition', '$callno', '$method', '$copy', '$price', '$publisher', '$bkcateg','$accno', '$series','$vol','$placeofpub','$mater','$notearea')");
+    VALUES ('null', '$barcode', '$title', '$fname', '$lname', '$copyright', '$edition', '$callno', '$method', '$copy', '$price', '$publisher', '$bkcateg','$accno', '$series','$vol','$placeofpub','$mater','$notearea', '$location')");
     if ($sql){
     	$sql2 = $conn->query("SELECT * FROM tb_acquisition ORDER BY AcquisitionId DESC");
     	$row=$sql2->fetch_assoc();

@@ -23,7 +23,7 @@ th {
 	
 	<div class = "col-xs-12">
 		<center>
-			<img src = "../../img/udm.jpg">
+			<img src = "../../img/udm.jpg" height="200px;">
 		</center>
 	</div>
 	<div class = "col-xs-12" style = "font-size:30px">
@@ -64,7 +64,7 @@ Web Based Library System For Universidad de Manila<br />
 			$f = mysqli_num_rows($sql1)+1;
 			if ($f != 1)
 			{
-				echo "<tr align='center' style='font-size: 20px;'>";
+				echo "<tr align='center'>";
 				echo "<td rowspan='$f'>" . $row["Barcode"] . "</td>";
 				echo "<td rowspan='$f'>" . $row["CopyRight"] . "</td>";
 				echo "<td  rowspan='$f'>" . $row["Title"] . "</td>";

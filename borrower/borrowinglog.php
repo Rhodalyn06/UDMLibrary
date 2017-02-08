@@ -40,9 +40,9 @@
         <div class="row">
                   <div class="col-md-12">
                     <!-- Advanced Tables -->
-                    <div class="panel panel-green">
+                    
                         <div class="panel-heading">
-                           View Borrowing Log
+                           View Borrowed Books
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -70,7 +70,7 @@
                                 </table>
                             </div>
                         </div>
-                    </div>
+                   
                   </div>
                 </div>
             </div>

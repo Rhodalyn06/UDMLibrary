@@ -10,7 +10,7 @@
                 Invalid Format! It should be 09 + 9 Digits!  
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

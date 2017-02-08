@@ -23,7 +23,7 @@
     echo date("Y M d");
 ?>
  &nbsp;
-
+<a href="ajax/logouts.php"><i class="fa fa-sign-out fa-1x"></i>Logout</a>
    
 
  

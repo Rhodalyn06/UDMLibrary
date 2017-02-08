@@ -19,12 +19,14 @@
                         echo $_SESSION['type'];
                     ?>
             <label style="font-size:20px;margin-left:10px">Today is:</label>
-                        <label style="font-size:20px;margin-left:10px;color:#32CD32;">                                
+                        <label style="font-size:20px;margin-left:10px;color:#649173;">                                
                                 <?php
                                 $Today = date('y:m:d');
                                 $new = date('l, F d, Y', strtotime($Today));
                                 echo $new;
                                 ?>
-                                </label>
+                                </label>  &nbsp; &nbsp;
+                                <a href="ajax/logouts.php"><i class="fa fa-sign-out fa-1x"></i>Logout</a>
 </div>
+
  </nav>

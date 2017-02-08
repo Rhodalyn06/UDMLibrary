@@ -31,7 +31,7 @@
 				    if ($row['BorrowerType']=="STUDENT"){
 				    	$g = 3;
 				    }
-				    $today = date_add($today, date_interval_create_from_date_string("3 Day"));
+				    $today = date_add($today, date_interval_create_from_date_string("1 Day"));
 				    $today = $today->format("Y-m-d");
 				    $datetoreturn=$today;
 				    //echo $today;

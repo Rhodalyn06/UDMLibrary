@@ -14,15 +14,11 @@
 		$btype = $_POST['type4'];
 		$address = $_POST['type5'];
 	
-		$contactnum = $_POST['type6'];
-		$bday = $_POST['type7'];
-		$middilename = $_POST['type8'];
+		$middilename = $_POST['type6'];
 		$sql=$conn->query("UPDATE tb_borrower SET FirstName='$fname',
 												  LastName='$lname',
 												  BorrowerType='$btype',
 												  Address='$address',
-												  ContactNo = '$contactnum', 
-												  Birthday='$bday',
 												  middilename = '$middilename'
 												  WHERE UserID='$userid'");
 	}

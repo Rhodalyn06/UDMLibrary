@@ -24,7 +24,7 @@ th {
 	
 	<div class = "col-xs-12">
 		<center>
-				<img src = "../../img/udm.jpg">
+				<img src = "../../img/udm.jpg" height="200px;">
 		</center>
 	</div>
 	<div class = "col-xs-12" style = "font-size:30px">

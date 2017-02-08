@@ -44,21 +44,23 @@
                     include_once('modals/ddelete.php');
                     include_once('modals/supdate.php');
                 ?>
-                  
+
+                
+              
                 <div class = "form-group">
-                  <select class = "form-control" onchange="viewDetails(this.value)">
+                  <select class = "form-control" style="height:50px; width: 50%;" onchange="viewDetails(this.value)">
                     <option value = "0" hidden>Choose One</option>
                     <option value = "1">All Users</option>
                     <option value = "2">All Borrowers</option>
                     <option value = "3">Librarian</option>
                     <option value = "4">Student</option>
                     <option value = "5">Faculty</option>
+                    <option value = "6">Alumni</option>
                   </select>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
                     <!-- Advanced Tables -->
-                    <div class="panel panel">
                         <div class="panel-heading" id = "heads" style="font-family:'MYRIAD PRO REGULAR';">
                               Search & Edit User
                         </div>
@@ -222,21 +224,21 @@
 
         }
         else{
-          var contactnum = document.getElementsByName('lcontactnum')[0].value
+        
           var borrowertype = document.getElementsByName('btype')[0].value;
           var address = document.getElementsByName('address')[0].value;
-          var bday = document.getElementsByName('bday')[0].value;
+        
 
           var middilename = document.getElementsByName('middilename')[0].value;
 
-          contactnum = contactnum.trim();
+          
           borrowertype = borrowertype.trim();
           address = address.trim();
-          bday = bday.trim();
+          
              
           middilename = middilename.trim();
 
-          if (fname == "" || lname == "" || contactnum == "" || borrowertype == "" || address == "" || bday == "" ||  middilename == "" )
+          if (fname == "" || lname == "" || borrowertype == "" || address == "" ||  middilename == "" )
           {
             if (fname == "")
             {
@@ -246,10 +248,7 @@
             {
               check(lname, '#lname');
             }
-            if (contactnum == "")
-            {
-              check(contactnum, '#contactnum');
-            }
+           
             if (borrowertype == "")
             {
               check(borrowertype, '#btype');
@@ -258,11 +257,7 @@
             {
               check(address, '#address');
             }
-            if (bday == "")
-            {
-              check(bday, '#bday');
-            }
-
+            
             if (middilename == "")
             {
               check(middilename, '#middilename');
@@ -302,17 +297,15 @@
             });
         }
         else{
-          var contactnum = document.getElementsByName('lcontactnum')[0].value
           var borrowertype = document.getElementsByName('btype')[0].value;
           var address = document.getElementsByName('address')[0].value;
-          var bday = document.getElementsByName('bday')[0].value;
           
           var middilename = document.getElementsByName('middilename')[0].value;
 
-          contactnum = contactnum.trim();
+
           borrowertype = borrowertype.trim();
           address = address.trim();
-          bday = bday.trim();
+
 
           middilename = middilename.trim();
           $.ajax({
@@ -320,7 +313,7 @@
               url: "ajax/update/edituser.php",
               type: 'POST',
               data: {type: user, type1: fname, type2: lname, type3: '2', type4: borrowertype, 
-                      type5:address,  type6: contactnum, type7: bday, type8: middilename},
+                      type5:address,  type6: middilename},
               success: function(data){
                 //$("#d").html(data);
                 $('#qupdate').modal('hide');

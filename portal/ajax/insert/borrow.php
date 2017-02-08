@@ -24,10 +24,10 @@
 				$bookonhand = $row['BookOnHand'];
 				$bookLimit=0;
 				if ($row['BorrowerType']=="STUDENT"){
-					$bookLimit = 3;	
+					$bookLimit = 2;	
 				}
 				else{
-					$bookLimit = 5;
+					$bookLimit = 2;
 				}
 				if ($bookonhand == $bookLimit){
 					echo "error2";

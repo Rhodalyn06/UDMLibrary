@@ -9,20 +9,25 @@
 	if ($type=="tb_users"){
 		$sql = $conn->query("SELECT * FROM tb_users WHERE UserName='" . $userid . "'");
 		$row = $sql->fetch_assoc();
+
 		$userid = $row['UserName'];
 		$fname = $row['FirstName'];
 		$lname = $row['LastName'];
+		$postion = $row['position'];
+
+
 		echo "<div class=\"form-group\" id = \"userid\">";
-		echo "<label>User ID</label>";
-		echo "<input class = \"form-control\"value=\"$userid\" id = \"u\" name=\"userid\" disabled
+		echo "<label style=\"font-size:15px;\">User ID</label>";
+		echo "<input class = \"form-control\"value=\"$userid\" style=\"width:40%;font-size:15px;\" id = \"u\" name=\"userid\" disabled
 		oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, 'userid')\">";
 		echo "</div>";
 
 		echo "<div class=\"form-group\" id = \"fname\">";
-		echo "<label>First Name</label>";
-		echo "<input class = \"form-control\" value=\"$fname\"
-		name=\"fname\" oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, '#fname')\">";
+		echo "<label style=\"font-size:15px;\">First Name</label>";
+		echo "<input class = \"form-control\" value=\"$fname\" name=\"fname\"
+		oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, '#fname')\">";
 		echo "</div>";
+
 
 		/*echo "<div class=\"form-group\" id = \"lname\">";
 		echo "<label>Middle Name</label>";
@@ -31,10 +36,17 @@
 		echo "</div>";
 
 		*/
+
 		echo "<div class=\"form-group\" id = \"lname\">";
-		echo "<label>Last Name</label>";
+		echo "<label style=\"font-size:15px;\">Last Name</label>";
 		echo "<input class = \"form-control\" value=\"$lname\" name=\"lname\"
 		oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, '#lname')\">";
+		echo "</div>";
+
+		echo "<div class=\"form-group\" id = \"postion\">";
+		echo "<label style=\"font-size:15px;\">Position</label>";
+		echo "<input class = \"form-control\"value=\"$postion\" style=\"width:40%;font-size:15px;\" name=\"postion\" disabled
+		oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, 'postion')\">";
 		echo "</div>";
 
 	}
@@ -46,40 +58,38 @@
 		
 		$lname = $row['LastName'];
 		$BorrowerType = $row['BorrowerType'];
-		$ContactNo = $row['ContactNo'];
-		$Birthday = $row['Birthday'];
 		$Address = $row['Address'];
 		$middilename = $row['middilename'];
 		
 
 		echo "<div class=\"form-group\" id = \"userids\">";
-		echo "<label>User ID</label>";
+		echo "<label style=\"font-size:15px;\">User ID</label>";
 		echo "<input class = \"form-control\"value=\"$userid\" name=\"userid\" disabled
 		oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, 'userid')\">";
 		echo "</div>";
 
 		echo "<div class=\"form-group\" id = \"fname\">";
-		echo "<label>First Name</label>";
+		echo "<label style=\"font-size:15px;\">First Name</label>";
 		echo "<input class = \"form-control\" value=\"$fname\" name=\"fname\"
 		oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, '#fname')\">";
 		echo "</div>";
 
 		
 		echo "<div class=\"form-group\" id = \"middilename\">";
-		echo "<label>Middle Name</label>";
+		echo "<label style=\"font-size:15px;\">Middle Initial (Optional)</label>";
 		echo "<input class = \"form-control\" value=\"$middilename\" name=\"middilename\"
 		oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, '#middilename')\">";
 		echo "</div>";
 		
 
 		echo "<div class=\"form-group\" id = \"lname\">";
-		echo "<label>Last Name</label>";
+		echo "<label style=\"font-size:15px;\">Last Name</label>";
 		echo "<input class = \"form-control\" value=\"$lname\" name=\"lname\"
 		oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, '#lname')\">";
 		echo "</div>";
 
 		echo "<div class=\"form-group\" id = \"btype\">";
-		echo "<label>Borrower Type</label>";
+		echo "<label style=\"font-size:15px;\">Borrower Type</label>";
 		echo "<select class = \"form-control\" name=\"btype\"
 		oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, '#btype')\">";
 		echo "<option value = \"STUDENT\" ";
@@ -95,21 +105,8 @@
 		echo "</select>";
 		echo "</div>";
 
-		echo "<div class=\"form-group\" id = \"contactnum\">";
-		echo "<label>Contact Number</label>";
-		echo "<input class = \"form-control\" value=\"$ContactNo\" name=\"lcontactnum\"
-		oninput =\"validateNumbers(this.name)\" onblur=\"check(this.value, '#contactnum')\"
-		maxlength=\"11\">";
-		echo "</div>";
-
-		echo "<div class=\"form-group\" id = \"bday\">";
-		echo "<label>Birthday</label>";
-		echo "<input type=\"date\"class = \"form-control\" value=\"$Birthday\" name=\"bday\"
-		 onblur=\"check(this.value, '#bday')\">";
-		echo "</div>";
-
 		echo "<div class=\"form-group\" id = \"address\">";
-		echo "<label>Address</label>";
+		echo "<label style=\"font-size:15px;\">Address</label>";
 		echo "<input class = \"form-control\" value=\"$Address\" name=\"address\"
 		oninput =\"validateAlphaNumer(this.name)\" onblur=\"check(this.value, '#address')\">";
 		echo "</div>";

@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Universidad de Manila</title>
  <link rel="shortcut icon" href="img/udm.jpg">
+ <meta name="author" content="Ralph Juniosa { Bored Developers } ">
 	<!-- BOOTSTRAP STYLES-->
 <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -77,26 +78,15 @@
     border-color: #5cb85c;
 }
 
-.panel-green .panel-heading {
-    border-color: #5cb85c;
-    color: #fff;
-    background-color: #5cb85c;
-}
-.btn-outline {
-    color: inherit;
-    background-color: transparent;
-    transition: all .5s;
-}
-.btn-success.btn-outline {
-    color: #5cb85c;
-}
-.btn-success.btn-outline:hover{
-  color: #ffffff;
-}
+
 
 .sidebar{
 
 background: #ff5656 !important;
 
 }
+
+.fields {width: 500px;}
+.fields > label { display:inline-block; width:150px; font-weight:bold; vertical-align:top; }
+.fields > span { display: inline-block; }
 </style>

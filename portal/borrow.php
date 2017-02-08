@@ -63,24 +63,24 @@
 
                 
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <!-- Advanced Tables -->
                     <div class="form-group">
-                      <label>Enter User ID: </label>
-                      <input class="form-control" id="stud"><br/>
-                      <button class="btn btn-default btn-block" onclick="viewDetails()">Next </button>
+                      <label style="font-size:18px;">User ID: </label>
+                      <input class="form-control" id="stud" style="width:40%;"><br/>
+                      <button class="btn btn-default btn-block" style="width:20%;font-size:20px;" onclick="viewDetails()">View </button>
                     </div>
                     <div id ="z">
                     </div>
                   </div>
 
 
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <!-- Advanced Tables -->
                     <div class="form-group">
-                      <label>Enter Barcode: </label>
-                      <input class="form-control" id="barc"><br/>
-                      <button class="btn btn-default btn-block" onclick="viewDetails1()">Next </button>
+                      <label style="font-size:18px;">Barcode: </label>
+                      <input class="form-control" id="barc" style="width:40%;"><br/>
+                      <button class="btn btn-default btn-block" style="width:20%;font-size:20px;"  onclick="viewDetails1()">View </button>
                     </div>
                     <div id ="y">
                     </div>
@@ -88,13 +88,20 @@
 
                 </div>
 
+      
+
                 <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <button class="btn btn-default btn-block" onclick="comp()"> PROCEED TRANSACTION</button>
-                    </div>
-                  </div>
-                </div>
+  <div class="col-md-3">
+    <button class="btn btn-default btn-block" onclick="comp()" style="width:45%;font-size:20px;">Proceed</button>
+  </div>
+    
+
+    <div class="col-md-3">
+        <button class="btn btn-default btn-block" type="button" style="width:45%;font-size:20px;" onclick="ClearFields();">Cancel</button>
+
+    </div>
+</div>
+
 
             </div>
              <!-- /. PAGE INNER  -->
@@ -366,6 +373,13 @@
       function compNo(){
         $('#complete').modal('hide');
       }
+
+      function ClearFields() {
+
+     document.getElementById("stud").value = "";
+     document.getElementById("barc").value = "";
+     
+}
       
     </script>
 

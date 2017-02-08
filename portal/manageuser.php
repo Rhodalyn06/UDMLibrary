@@ -39,7 +39,7 @@
                 ?>
                
                 <div class = "form-group">
-                  <select class = "form-control" onchange="viewDetails(this.value)">
+                  <select class = "form-control" style="width: 50%;" onchange="viewDetails(this.value)">
                     <option value = "0" hidden>Choose One</option>
                     <option value = "1">All Users</option>
                     <option value = "2">All Borrowers</option>

@@ -39,9 +39,9 @@
       <div class="row">
                   <div class="col-md-12">
                     <!-- Advanced Tables -->
-                    <div class="panel panel-green">
+                    
                         <div class="panel-heading">
-                          View Reservation Log
+                          View Reserve Books
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -67,7 +67,7 @@
                                 </table>
                             </div>
                         </div>
-                    </div>
+                   
                   </div>
                 </div>
             </div>

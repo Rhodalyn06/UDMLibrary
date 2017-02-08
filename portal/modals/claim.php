@@ -10,8 +10,8 @@
                 Do you really want to be claim this book?   
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="close">No</button>
-                <button type="button" class="btn btn-success" onclick="yclaim()"><span class="glyphicon glyphicon-thumbs-up"></span> Yes</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" data-dismiss="close">Cancel</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-success" onclick="yclaim()">Yes</button>
             </div>
         </div>
     </div>

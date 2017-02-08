@@ -40,7 +40,7 @@
         <div class="row">
                   <div class="col-md-12">
                     <!-- Advanced Tables -->
-                    <div class="panel panel-green">
+                    
                         <div class="panel-heading">
                         View Unreturned Books
                         </div>
@@ -67,7 +67,7 @@
                                 </table>
                             </div>
                         </div>
-                    </div>
+                   
                   </div>
                 </div>
             </div>

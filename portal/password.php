@@ -29,18 +29,18 @@
                  <hr />
                
                  <div class="row">
-                 <div class="col-md-9">
+                 <div class="col-md-6">
                  <div class="form-group">
-                  <label>Old Password</label>
+                  <label style="font-size:20px;">Old Password</label>
                   <input class="form-control" type = "password" id="oldPass"/>
-                  <label>New Password</label>
+                  <label style="font-size:20px;">New Password</label>
                   <input class="form-control" type = "password" id="newPass"/>
-                  <label>Confirm Password</label>
+                  <label style="font-size:20px;">Confirm Password</label>
                   <input class="form-control" type = "password" id="confirmPass"/><br/>
 
                   <div class="row">
-                  <div class="col-md-3">
-                  <button type="button" class = "btn btn-default btn-block"onclick="changePw()">Submit
+                  <div class="col-md-4">
+                  <button type="button" style="width:45%;font-size:20px;" class = "btn btn-default btn-block"onclick="changePw()">Submit
                   </button>
                   </div>
                   </div>

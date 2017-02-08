@@ -10,8 +10,8 @@
                 Do you really want to save changes?    
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" onclick="no()">No</button>
-                <button type="button" class="btn btn-success" onclick="yes()"><span class="glyphicon glyphicon-thumbs-up"></span> Yes</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" onclick="no()">Cancel</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-success" onclick="yes()">Yes</button>
             </div>
         </div>
     </div>

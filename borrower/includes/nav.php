@@ -9,35 +9,33 @@
             <img src="assets/img/udm.jpg" class="user-image img-responsive"/>
 		</li>
 				
-					
+				
         <li>
-            <a class="" id="index" href ="index.php">
-            <i class="fa fa-dashboard fa-3x"></i> Home</a>
+            <a class="" id="opac" href="opac.php"><i class="fa fa-search fa-3x"></i>OPAC</a>
         </li>
+
+     
         <li>
-            <a class="" id="opac" href="opac.php"><i class="fa fa-book fa-3x"></i>Online Opac</a>
+            <a class="" id="reserve" href="reservation.php"><i class="fa fa-bookmark fa-3x"></i> Reserve Books</a>
+        </li>   
+        
+         <li>
+            <a class="" id="vreserve" href="reservationlog.php"><i class="fa fa-list-ul fa-3x"></i> View Reserve Books</a>
         </li>
+
         <li>
-            <a class="" id="vborrowlog" href="borrowinglog.php"><i class="fa fa-folder-open fa-3x"></i> View Borrowing Log</a>
+            <a class="" id="vborrowlog" href="borrowinglog.php"><i class="fa fa-folder-open fa-3x"></i> View Borrowed Books</a>
         </li>
         <li>
             <a class="" id="vborrow" href="unreturn.php"><i class="fa fa-mail-forward fa-3x"></i> View Unreturned Books</a>
         </li>	
       	
-		<li>
-            <a class="" id="vreserve" href="reservationlog.php"><i class="fa fa-list-ul fa-3x"></i> View Reservation Log</a>
-        </li>
-        
+
+              
         <li>
             <a class="" id="passwords" href="password.php"><i class="fa fa-print fa-3x"></i> Change Password</a>
         </li>
-        <li>
-            <a class="" id="reserve" href="reservation.php"><i class="fa fa-bookmark fa-3x"></i> Reserve Books</a>
-        </li>	
-           
-        <li>
-        <a href="ajax/logouts.php" class=""><i class="fa fa-sign-out fa-3x"></i> Logout</a> </div>
-        </li>
+     
     </ul>
                
 </div>

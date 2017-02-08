@@ -2,7 +2,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Universidad de Manila</title>
- <link rel="shortcut icon" href="img/sdsc_logo.gif">
+ <link rel="shortcut icon" href="img/udm.jpg">
+ <meta name="author" content="Ralph Juniosa { Bored Developers } ">
   <!-- BOOTSTRAP STYLES-->
 <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->

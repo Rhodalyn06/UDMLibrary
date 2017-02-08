@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Universidad de Manila</title>
     <link rel="shortcut icon" href="images/udm.jpg">
+    <meta name="author" content="Ralph Juniosa { Bored Developers } ">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
     <!-- BOOTSTRAP STYLES-->
@@ -25,8 +26,8 @@
         <nav  class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
             <div class="panel-body">
                             <ul class="nav nav-pills">
-                                <li onclick="set('home')" class="active"><a href="#home" data-toggle="tab">Home</a>
-                                </li>
+                                <!--<li onclick="set('home')" class="active"><a href="#home" data-toggle="tab">Home</a>
+                                </li>-->
                                 <li onclick="set('lib')" class=""><a href="#lib" data-toggle="tab">Librarian's Portal</a>
                                 </li>
                                 <li onclick="set('borrower')" class=""><a href="#admin" data-toggle="tab">Borrower's Portal</a>
@@ -46,35 +47,10 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="home">
                          
-                                    <img src="images/udm3.png"  width="100%" height="500px;" style="margin-top:50px;border-radius:15px;">
+                                    <!-- <img src="images/udm3.png"  width="100%" height="500px;" style="margin-top:50px;border-radius:15px;"> -->
 
-                                    <div class="col-md-12">
-                                        <div class="col-md-6">
-                                            <h3 align="center">
-                                                <strong>Mission</strong>
-                                            </h3>
-                                            <p align="justify">
-
-                                           </p>
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <h3 align="center">
-                                                <strong>Vision</strong>
-                                                
-                                            </h3><p align="justify">
-                                           </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12">
-                                        <h3 align="center">
-                                            <strong>About Us</strong>
-
-                                        </h3><p align="justify">
-                                       </p>
-
-
-                                    </div>
-                                     <p style="text-align:center;"> Copyright Year:2016 <br/> </p>
+                                <h1 style="color:#fff;text-align:center;margin-top:200px;"> Welcome  </h1>
+                                    
                                 </div>
 
 
@@ -84,8 +60,10 @@
                                         <div class="container">
                                             
                                             <div class="form-login">
-                                            <img src="images/udm.jpg" class="img-responsive" alt="UDM LOGO" width="304" height="236" style="margin-left:20px;margin-bottom:30px;"> 
-                                              <h2 class="form-login-heading">Admin Login</h2> 
+                                            
+                                            <img src="images/udm.jpg" class="img-responsive" alt="UDM LOGO" style="margin-left:20px;width:90%;padding-top:10px;"/> 
+
+                                             
                                                 <div class="login-wrap">
 
                                                     <div class = "form-group" id = "xx">
@@ -111,7 +89,7 @@
                                                     </span>
                                                     <br/>
                                                     <button class="btn btn-theme btn-block" onclick="libLog()"><i class="fa fa-sign-in"></i> LOG IN</button>
-                                                    <hr>
+                                                  
 
                                                         
                                             
@@ -129,8 +107,8 @@
                                 <div class="tab-pane fade" id="admin">
                                 
                                     <div class="form-login">
-                                    <img src="images/udm.jpg" class="img-responsive" alt="UDM LOGO" width="304" height="236" style="margin-left:20px;margin-bottom:30px;"> 
-                                                <h2 class="form-login-heading">User Login</h2> 
+                                    <img src="images/udm.jpg" class="img-responsive" alt="UDM LOGO" width="300" style="margin-left:20px;width:90%;padding-top:10px;"> 
+                                                
                                                 <div class="login-wrap">
 
                                                     <div class = "form-group" id = "xx">
@@ -154,7 +132,7 @@
                                                     </span>
                                                     <br/>
                                                     <button class="btn btn-theme btn-block" onclick="borLog()"><i class="fa fa-sign-in"></i> LOG IN</button>
-                                                    <hr>
+                                           
                                                 </div>
                                             </div>
                                 </div>
@@ -183,7 +161,7 @@
                                                     </span>
                                                     <br/>
                                                     <button class="btn btn-theme btn-block" onclick="borLog()"><i class="fa fa-sign-in"></i> LOG IN</button>
-                                                    <hr>
+                                                  
                                                         
                                             
                                                 </div>
@@ -205,7 +183,7 @@
                     include_once('portal/modals/allfields.php');
                 ?>
                  <!-- /. ROW  -->
-                 <hr />
+            
          <!-- /. PAGE WRAPPER  -->
 
      <!-- /. WRAPPER  -->
@@ -226,12 +204,9 @@
     <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
     <script src="assets/js/imagescript.js"></script>
     <script>
-             $.backstretch("assets/img/white.jpg", {speed: 500});
+             $.backstretch("assets/img/udm4.jpg", {speed: 500});
         function set(str){
-            if (str == "home"){
-                $.backstretch("assets/img/white.jpg", {speed: 500});
-            }
-            else if (str == "lib"){
+           if (str == "lib"){
                 $.backstretch("assets/img/2.jpg", {speed: 500});
             }
             else if (str == "borrower"){

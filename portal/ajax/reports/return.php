@@ -45,7 +45,7 @@ div{
 ?>
 <div class = "row">
 		
-		<img class="img-responsive" src="../../img/udm.jpg" alt="" width="40%" height="100px;" style="margin-left:100px;">
+		
 		<p style="text-align:center;">Universidad de Manila Official Receipt </p>
 	
 	<p style="font-size:15px; font-family: Arial;">

@@ -10,8 +10,8 @@
                 Do you really want to be restored?    
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" onclick="dNo()">No</button>
-                <button type="button" class="btn btn-success" onclick="dYes()"><span class="glyphicon glyphicon-thumbs-up"></span> Yes</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" onclick="dNo()">Cancel</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-success" onclick="dYes()">Yes</button>
             </div>
         </div>
     </div>

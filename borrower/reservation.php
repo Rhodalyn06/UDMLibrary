@@ -28,7 +28,13 @@
                 ?>
                  <!-- /. ROW  -->
                  <hr />
-
+                    <div class="row">
+                    <div class="col-md-6">
+                    <div class="alert alert-info">
+                  <strong><span class="glyphicon glyphicon-info-sign"> </span>&nbsp;Double Click the book you want to reserve</strong><br><br>
+                  </div>
+                  </div>
+                  </div>
                 <div class = "row">
                   <div class = "col-md-6">
                     <select id = "filter" class="form-control" style="height:45px;">
@@ -38,12 +44,12 @@
                     </select>
                   </div>
                   <div class = "col-md-6">
-                    <input class = "form-control" id="txtFilter"/>
+                    <input class = "form-control" id="txtFilter" />
                   </div>
                 </div><br/>
                 <div class = "row">
-                  <div class = "col-md-12">
-                    <button class="btn btn-outline btn-success btn-block" onclick="search()">Search <span class="glyphicon glyphicon-search"></span></button>
+                  <div class = "col-md-3">
+                    <button class="btn btn-success btn-block" onclick="search()">Search <span class="glyphicon glyphicon-search"></span></button>
                   </div>
                 </div>
                 <br/>
@@ -53,7 +59,7 @@
         <div class="row">
                   <div class="col-md-12">
                     <!-- Advanced Tables -->
-                    <div class="panel panel-green">
+                   
                         <div class="panel-heading">
                            Reserve Books
                         </div>
@@ -62,15 +68,17 @@
                                 <table class="table table-striped table-bordered table-hover" id="tblBook">
                                     <thead>
                                       <tr>
-                                        
-                                        <td>
-                                          Barcode
-                                        </td>
                                         <td>
                                           Title
                                         </td>
                                         <td>
                                           Authors
+                                        </td>
+                                        <td>
+                                          Edition
+                                        </td>
+                                           <td>
+                                          Call No
                                         </td>
                                         <td>
                                           Status
@@ -84,7 +92,7 @@
                                 </table>
                             </div>
                         </div>
-                    </div>
+                   
                   </div>
                 </div>
                 <!-- /FOR TABLE -->
