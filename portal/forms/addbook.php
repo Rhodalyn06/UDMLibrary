@@ -1,46 +1,69 @@
 <?php
   include_once('ajax/validate.html');
 ?>
+<div id="choose-category" class="form">
+  <h3>Basic Book Info</h3>
+  <div class="form-group">
+    <label>Catalogue Type:</label>
+    <select class="form-control" id="category-type-control">
+      <option value="DDC">DDC</option>
+      <option value="LCC">LCC</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Category</label>
+    <div class="category-list"></div>
+    <input type="hidden" id="category" name="category">
+  </div>
+  <div class="form-group">
+    <label>Author's Last Name:</label>
+    <input
+      id="lastname"
+      name="lastname"
+      class="form-control"
+      maxlength = 50
+      oninput="validateLetters(this.name)"
+      onblur="validateInput('lastname', this.value, 'flastname')"
+    >
+  </div>
 
-
-<table border="0" style="z-index: 1; position: inline; width: 440px; height: 334px; left: 0px; top: 0px;" width="644">
-
-                <tbody>
-                    <tr>
-
-                        <td scope="col" width="144">
-                         <div class = "form group" id = "ftitle">
-                        <strong ><span class="style4" style="font-size:18px;"><span class="style5">Title:</span> &nbsp;</span></strong></td>
-                        <td><input class="form-control" name="title" id = "title" oninput="validateTitle(this.name)"
-      onblur="validateInput('title', this.value, 'ftitle')" maxlength = 100>
-                  </td>
-                  </div>
-                   </td>
-                    </tr>
-
-
-  &nbsp;
-
-                    <tr>
-                        <td scope="col">
-                        <div class = "form group" id = "flastname">
-                        <strong><span class="style6" style="font-size:18px;">Author's Last Name: &nbsp;</span><br /></strong></td>
-                        <td><input class="form-control" name="lastname" id = "lastname" oninput="validateLetters(this.name)"
-    onblur="validateInput('lastname', this.value, 'flastname')" maxlength = 50></td>
-                </div>
-                    </tr>
-                    <tr>
-                        <td scope="col">
-                         <div class = "form group" id = "ffirstname">
-                         <strong><span class="style6" style="font-size:18px;" >Author's First Name: &nbsp;</span><br /></strong></td>
-                        <td> <input class="form-control" name="firstname" id = "firstname" oninput="validateLetters(this.name)"
-    onblur="validateInput('firstname', this.value, 'ffirstname')" maxlength = 50>
-
-    </div>
-
-      <br>
-                    </tr>
-
+  <button class="btn book-form-enable" disabled>Next</button>
+</div>
+<div id="add-book-form" class="hide">
+<table id="border="0">
+  <tbody>
+    <tr>
+      <td scope="col" width="144">
+        <span class="style6" style="font-size: 18px"><strong>Title</strong></span>
+      </td>
+      <td>
+        <input class="form-control" name="title" id = "title" oninput="validateTitle(this.name)"
+            onblur="validateInput('title', this.value, 'ftitle')" maxlength = 100>
+      </td>
+    </tr>
+    <tr>
+      <td scope="col" width="144">
+        <span class="style6" style="font-size: 18px"><strong>Author's Last Name:</strong></span>
+      </td>
+      <td>
+          <input type="text" readonly class="form-control lastname-placeholder">
+      </td>
+    </tr>
+    <tr>
+      <td scope="col" width="144">
+        <span class="style6" style="font-size: 18px"><strong>Author's First Name:</strong></span>
+      </td>
+      <td>
+          <input
+            id="firstname"
+            name="firstname"
+            class="form-control"
+            maxlength = 50
+            oninput="validateLetters(this.name)"
+            onblur="validateInput('firstname', this.value, 'ffirstnamename')"
+          >
+        </td>
+    </tr>
 
                          <tr>
                         <td scope="col">
@@ -151,22 +174,7 @@
                         <td scope="col">
                            <div class = "form group"  id = "fcategory">
                         <strong><span class="style6" style="font-size:18px;">Category: &nbsp;</span></strong></td>
-                        <td><select class ="form-control" style="margin-bottom:10px;" style="height:50px;" id = "category"
-        onblur="validateSelect('category', this.value, 'fcategory')">
-
-         <?php
-
-  include_once('../connection.php');
-
-  $sql = $conn->query("SELECT * FROM tb_categoryy");
-  while(($row=$sql->fetch_assoc())==true){
-
-    ?>
-    <option value="<?php echo $row['category']; ?>"><?php echo $row['category']; ?></option>
-    <?php }
-    ?>
-
-        </select></td></div>
+                        <td><input class="form-control category-placeholder" type="text" readonly></span></td></div>
                     </tr>
                           <tr>
                         <td scope="col">
@@ -229,7 +237,7 @@
 
 <br/><br/>
 
-  <div class="row">
+<div class="row">
   <div class="col-md-3">
        <button class="btn btn-default btn-block" style="width:55%;font-size:20px;" onclick = "save()">Add Book</button>
   </div>
@@ -240,7 +248,198 @@
 
     </div>
 </div>
+</div>
 <script>
+  function init() {
+    loadCategory($('#category-type-control').val());
+    $('#category-type-control').change(function() {
+      loadCategory($(this).val());
+    });
+
+    $('.category-list').change('.category-control', function($e) {
+      $category = $($e.target);
+      $option = $category.find('option:selected');
+      if ($category.val()) {
+        $('#category').val($option.text());
+        $('.category-placeholder').val($option.text());
+      }
+      $category.nextAll().remove();
+      loadCategory($category.attr('data-type'), $category.val());
+    });
+
+    $('.book-form-enable').click(function() {
+      $('#add-book-form').removeClass('hide');
+    });
+
+    $('#lastname').change(function() {
+      $('.lastname-placeholder').val($(this).val());
+      updateCallNumber()
+    });
+  }
+
+  function loadCategory(type, parent_id) {
+    type = type || 'DDC';
+    $.ajax({
+      url: "ajax/category/get.php",
+      data: {
+        'type': type,
+        'parent_id': parent_id || 0,
+      },
+      success: function(response) {
+        if (response['data'].length) {
+          $select = $('<select>');
+          $select.addClass('form-control');
+          $select.addClass('category-control');
+          $select.attr('data-type', type);
+          $select.append($('<option>Choose one</option>'));
+
+          for (var i = 0; i < response['data'].length; i++) {
+            var category = response['data'][i];
+            $option = $('<option></option>');
+            $option.attr('value', category.id).text(category.category);
+            $option.attr('data-call-number', category.call_number);
+            $option.appendTo($select);
+          }
+
+          $select.appendTo($('.category-list'));
+        }
+        updateCallNumber();
+      }
+    })
+  }
+
+  function updateCallNumber() {
+    $lastname = $('#lastname').val();
+    $category = $('.category-list .category-control:last');
+    if (!$lastname || !$category.val()) {
+      $('.book-form-enable').attr('disabled', true);
+      return;
+    } else {
+      $lastname = $lastname.toLowerCase().split('');
+      $('.book-form-enable').attr('disabled', false);
+      var callNumber = $category.find('option:selected').attr('data-call-number') || '';
+      var cutterNumber = '';
+      var c = $lastname.shift();
+
+      if (c == 's') {
+        cutterNumber = 'S';
+
+        c = $lastname.shift();
+        code = c.charCodeAt(0);
+
+        if (c == 'a') {
+          cutterNumber += '2';
+        } else if (c == 'c' && $lastname[0] == 'h') {
+          cutterNumber += '3';
+        } else if (c == 'e') {
+          cutterNumber += '4';
+        } else if (code >= 'h'.charCodeAt(0) && code <= 'i'.charCodeAt(0)) {
+          cutterNumber += '5';
+        } else if (code >= 'm'.charCodeAt(0) && code <= 'p'.charCodeAt(0)) {
+          cutterNumber += '6';
+        } else if (c == 't') {
+          cutterNumber += '7';
+        } else if (c == 'u') {
+          cutterNumber += '8';
+        } else if (code >= 'w'.charCodeAt(0) && code <= 'z'.charCodeAt(0)) {
+          cutterNumber += '9';
+        }
+      } else if (c == 'q') {
+        cutterNumber = 'Q';
+
+        c = $lastname.shift();
+        code = c.charCodeAt(0);
+
+        if (c == 'u') {
+          c = $lastname.shift();
+          code = c.charCodeAt(0);
+
+          if (c == 'a') {
+            cutterNumber += '3';
+          } else if (c == 'e') {
+            cutterNumber += '4';
+          } else if (c == 'i') {
+            cutterNumber += '5';
+          } else if (c == 'o') {
+            cutterNumber += '6';
+          } else if (c == 'r') {
+            cutterNumber += '7';
+          } else if (c == 't') {
+            cutterNumber += '8';
+          } else if (c == 'y') {
+            cutterNumber += '9';
+          }
+        } else if (code >= 'a'.charCodeAt(0) && code <= 't'.charCodeAt(0)) {
+          cutterNumber += '2'
+        }
+      } else if (['a', 'e', 'i', 'o', 'u'].indexOf(c) !== -1) {
+        cutterNumber = c.toUpperCase();
+
+        c = $lastname.shift();
+        code = c.charCodeAt(0);
+
+        if (c == 'b') {
+          cutterNumber += '2';
+        } else if (c == 'd') {
+          cutterNumber += '3';
+        } else if (c == 'l' || c == 'm') {
+          cutterNumber += '4';
+        } else if (c == 'n') {
+          cutterNumber += '5';
+        } else if (c == 'p') {
+          cutterNumber += '6';
+        } else if (c == 'r') {
+          cutterNumber += '7';
+        } else if (c == 's' || c == 't') {
+          cutterNumber += '8';
+        } else if (code >= 'u'.charCodeAt(0) && code <= 'y'.charCodeAt(0)) {
+          cutterNumber += '9';
+        }
+      } else if (code >= '0'.charCodeAt(0) && code <= '9'.charCodeAt(0)) {
+        cutterNumber = 'A1' + c;
+      } else {
+        cutterNumber = c.toUpperCase();
+
+        c = $lastname.shift();
+        code = c.charCodeAt(0);
+
+        if (c == 'a') {
+          cutterNumber += '3';
+        } else if (c == 'e') {
+          cutterNumber += '4';
+        } else if (c == 'i') {
+          cutterNumber += '5';
+        } else if (c == 'o') {
+          cutterNumber += '6';
+        } else if (c == 'r') {
+          cutterNumber += '7';
+        } else if (c == 'u') {
+          cutterNumber += '8';
+        } else if (c == 'y') {
+          cutterNumber += '9';
+        }
+      }
+
+      code = c.charCodeAt(0);
+      if (code >= 'a'.charCodeAt(0) && code <= 'd'.charCodeAt(0)) {
+        cutterNumber += '3';
+      } else if (code >= 'e'.charCodeAt(0) && code <= 'h'.charCodeAt(0)) {
+        cutterNumber += '4';
+      } else if (code >= 'i'.charCodeAt(0) && code <= 'l'.charCodeAt(0)) {
+        cutterNumber += '5';
+      } else if (code >= 'm'.charCodeAt(0) && code <= 'o'.charCodeAt(0)) {
+        cutterNumber += '6';
+      } else if (code >= 'p'.charCodeAt(0) && code <= 's'.charCodeAt(0)) {
+        cutterNumber += '7';
+      } else if (code >= 't'.charCodeAt(0) && code <= 'v'.charCodeAt(0)) {
+        cutterNumber += '8';
+      } else if (code >= 'w'.charCodeAt(0) && code <= 'z'.charCodeAt(0)) {
+        cutterNumber += '9';
+      }
+
+      $('#callno').val(callNumber + ' .' + cutterNumber);
+    }
+  }
   // viewing of list of sub authors
   function viewAuthor(){
     $.ajax({
