@@ -59,13 +59,12 @@ if ($id) {
             'message' => 'Unable to cancel reservation',
         ));
         exit;
-    } else if ($result->affected_rows) {
-        $conn->query("
-            UPDATE tb_borrower
-            SET BookOnHand = BookOnHand - 1
-            WHERE BorrowerID = {$reservation['BorrowerID']}
-        ");
     }
+    $conn->query("
+        UPDATE tb_borrower
+        SET BookOnHand = BookOnHand - 1
+        WHERE BorrowerID = {$reservation['BorrowerID']}
+    ");
     echo json_encode(array('status' => 'success'));
 } else {
     echo json_encode(array(

@@ -55,14 +55,17 @@ function clearReservation($id) {
     );
 
     if (!$result) {
-        return false;
-    } else if ($result->affected_rows) {
-        $conn->query("
-            UPDATE tb_borrower
-            SET BookOnHand = BookOnHand - 1
-            WHERE BorrowerID = {$reservation['BorrowerID']}
-        ");
+        echo json_encode(array(
+            'status' => 'error',
+            'message' => 'Unable to cancel reservation',
+        ));
+        exit;
     }
+    $conn->query("
+        UPDATE tb_borrower
+        SET BookOnHand = BookOnHand - 1
+        WHERE BorrowerID = {$reservation['BorrowerID']}
+    ");
     return true;
 }
 header('Content-type: application/json');
