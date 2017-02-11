@@ -5,7 +5,7 @@
 	$id = $_REQUEST['type'];
 	$date = date("Y-m-d H:i:s");
 	$sql = $conn->query(
-		"SELECT BorrowerID FROM tb_borrower WHERE UserID = '$user'"
+		"SELECT BorrowerID, BookOnHand FROM tb_borrower WHERE UserID = '$user'"
 	);
 	$row = $sql->fetch_assoc();
 
