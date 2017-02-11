@@ -3,7 +3,7 @@
 	include_once('../session.php');
 	$user = $_SESSION["id"];
 	$id = $_REQUEST['type'];
-	$date = date("Y-m-d");
+	$date = date("Y-m-d H:i:s");
 	$sql = $conn->query(
 		"SELECT BorrowerID FROM tb_borrower WHERE UserID = '$user'"
 	);
@@ -18,7 +18,7 @@
 		FROM tb_book b
 		JOIN tb_book b2 ON b.AcquisitionID = b2.AcquisitionID AND b.ID != b2.ID
 		JOIN tb_reservation r2 ON b2.ID = r2.BookID
-		WHERE r2.BorrowerID='$borrower' AND b.ID='$id'
+		WHERE r2.BorrowerID='$borrower' AND b.ID='$id' AND r2.Status != 'Cancelled'
 	");
 	if (mysqli_num_rows($sql) || $bookOnHand >= $bookLimit) {
 		echo "error";

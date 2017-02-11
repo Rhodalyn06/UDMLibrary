@@ -7,10 +7,10 @@
                 <h4 class="modal-title" id="myModalLabel">ALERT</h4>
             </div>
             <div class="modal-body">
-                Do you really want to be claim this book?   
+                Do you really want to claim this book?
             </div>
             <div class="modal-footer">
-                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" data-dismiss="close">Cancel</button>
+                <button type="button" style="width:40%;font-size:20px;" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 <button type="button" style="width:40%;font-size:20px;" class="btn btn-success" onclick="yclaim()">Yes</button>
             </div>
         </div>

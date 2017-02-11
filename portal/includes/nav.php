@@ -3,6 +3,13 @@
 
     include 'includes/style.php';
     $module = $_SESSION['module'];
+
+    $sql = $conn->query('SELECT COUNT(*) AS c FROM tb_reservation WHERE status = "Reserved" AND DateReserved + INTERVAL 1 DAY < NOW()');
+
+    $unclaimed_reservation = 0;
+    if ($sql) {
+        $unclaimed_reservation = $sql->fetch_assoc()['c'];
+    }
 ?>
 
 
@@ -101,7 +108,12 @@
             <a class="" id="penalty" href="penalty.php"><img class="responsive" src="./img/changepenalty.png" style="width:20%"; height="auto;"> Change Penalty Price</a>
         </li>
         <li>
-            <a class="" id="reserve" href="reservation.php"><img class="responsive" src="./img/Reservation.png" style="width:20%"; height="auto;">  Manage Reservations</a>
+            <a class="" id="reserve" href="reservation.php"><img class="responsive" src="./img/Reservation.png" style="width:20%"; height="auto;">
+                Manage Reservations
+                <?php if ($unclaimed_reservation): ?>
+                    <label class="label label-danger unclaimed-reservations"><?= $unclaimed_reservation ?></label>
+                <?php endif ?>
+            </a>
         </li>
 
          <li>

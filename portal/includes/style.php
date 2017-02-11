@@ -16,12 +16,12 @@
 <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
 <style type="text/css">
 
-	.opac { 
+	.opac {
       text-align: center;
       color: green;
 
     }
-.sdsclogo { 
+.sdsclogo {
      width: 200px;
     height: 200px;
  float: left;
@@ -67,4 +67,11 @@ background: #ff5656 !important;
 .fields {width: 500px;}
 .fields > label { display:inline-block; width:150px; font-weight:bold; vertical-align:top; }
 .fields > span { display: inline-block; }
+.unclaimed-reservations {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  padding: 5px;
+  border-radius: 2em;
+}
 </style>
