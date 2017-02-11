@@ -15,11 +15,11 @@
     <div id="wrapper">
         <?php
           include_once('includes/header.php')
-        ?>  
+        ?>
            <!-- /. NAV TOP  -->
         <?php
             include_once('includes/nav.php')
-        ?>  
+        ?>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper">
             <div id="page-inner">
@@ -30,7 +30,7 @@
                  <hr />
 
                 <?php
-                    
+
                      //book viewing
                     include_once('modals/viewbook.php');
 
@@ -43,8 +43,8 @@
                     //editing subauthors
                     include_once('modals/viewsubauthors.php');
                     include_once('modals/editsubauthor.php');
-                    
-                    
+
+
                     //alerts
                     include_once('modals/contact.php');
                     include_once('modals/allfields.php');
@@ -54,8 +54,8 @@
                     include_once('modals/ddelete.php');
                     include_once('modals/supdate.php');
                 ?>
-                
-    
+
+
                 <div class="row">
                   <div class="col-md-12">
                     <!-- Advanced Tables -->
@@ -104,6 +104,24 @@
       include_once('includes/scripts.php');
     ?>
     <script type="text/javascript">
+      function init() {
+        $(document).on('change', '#edit-category-type-select', function(e) {
+          $('.category-list').empty();
+          $('#10a').val('');
+          loadCategory($(e.target).val());
+        });
+
+        $(document).on('change', '.category-control', function(e) {
+          $category = $(e.target);
+          $option = $category.find('option:selected');
+          if ($category.val()) {
+            $('#10a').val($option.text());
+            $('.category-display').val($option.text());
+          }
+          $category.nextAll().remove();
+          loadCategory($category.attr('data-type'), $category.val());
+        });
+      }
 
       var id = "";
       var gg="";
@@ -115,16 +133,56 @@
             url: "ajax/view/editbook.php",
             type: 'POST',
             data: {},
-            success: function(data){
-              
+            success: function(data) {
+
               $("#f").html(data);
               $('#tblBooks').dataTable();
               //alert(data);
             }
           });
-
-        
       }
+
+      function editCategory() {
+        $('#10a').val('');
+        loadCategory();
+        $('#10f').show();
+      }
+
+      function resetCategory() {
+        $('#10a').val($('#10a').attr('data-original'));
+        $('.category-display').val($('#10a').attr('data-original'));
+      }
+
+      function loadCategory(type, parent_id) {
+        type = type || 'DDC';
+        $.ajax({
+          url: "ajax/category/get.php",
+          data: {
+            'type': type,
+            'parent_id': parent_id || 0,
+          },
+          success: function(response) {
+            if (response['data'].length) {
+              $select = $('<select>');
+              $select.addClass('form-control');
+              $select.addClass('category-control');
+              $select.attr('data-type', type);
+              $select.append($('<option>Choose one</option>'));
+
+              for (var i = 0; i < response['data'].length; i++) {
+                var category = response['data'][i];
+                $option = $('<option></option>');
+                $option.attr('value', category.id).text(category.category);
+                $option.attr('data-call-number', category.call_number);
+                $option.appendTo($select);
+              }
+
+              $select.appendTo($('.category-list'));
+            }
+          }
+        })
+      }
+
       //for modal viewing
       function viewbook(str){
         id = "";
@@ -163,7 +221,7 @@
 
       //for closing
       function closes(){
-        
+
         $('#editview').modal('hide');
         $('#viewsub').modal('hide');
         viewbook(id);
@@ -191,7 +249,7 @@
         var callno = $('#1a').val();
         var title = $('#2a').val();
         var lname = $('#3a').val();
-        var fname = $('#4a').val(); 
+        var fname = $('#4a').val();
         var edition = $('#5a').val();
         var copyright = $('#6a').val();
         var isbn = $('#7a').val();
@@ -225,7 +283,7 @@
         var callno = $('#1a').val();
         var title = $('#2a').val();
         var lname = $('#3a').val();
-        var fname = $('#4a').val(); 
+        var fname = $('#4a').val();
         var edition = $('#5a').val();
         var copyright = $('#6a').val();
         var isbn = $('#7a').val();
@@ -312,11 +370,11 @@
 
         //Clear Datas
         var datas = '';
-        
+
         //PARENT ID
         var parentId = '';
         var ctr = 1;
-        
+
         $(':checkbox:checked').each(function(){
 
             if(ctr == 45){
@@ -333,11 +391,11 @@
                     //$('#x').dataTable();
                     $('#qdelete').modal('hide');
                     $('#sdelete').modal('show');
-                    
+
 
                     //alert(data);
                     //viewDetails();
-                  
+
                   }
                 });
 
@@ -351,7 +409,7 @@
                 ctr++;
             }
 
-            
+
 
         });
 
@@ -368,7 +426,7 @@
                     $('#x').dataTable();
                     $('#qdelete').modal('hide');
                     $('#sdelete').modal('show');
-                  
+
 
                     //alert(data);
                     //viewDetails();
@@ -379,10 +437,10 @@
         }
 
 
-        
+
       }
       function dNo(){
-        
+
 
         $('#viewallbooks').modal('show');
         $('#qdelete').modal('hide');
@@ -411,11 +469,11 @@
         $('#view').modal('show');
         $('#viewallbooks').modal('hide');
 
-        
+
       }
 
       $(document.body).on('click', '#btnSelAll', function(){
-        
+
         if($(this).html() == 'Select All'){
 
             $('.postCheckBox').each(function(){
@@ -427,7 +485,7 @@
 
             $(this).html('Deselect All');
         }else{
-            
+
             $('.postCheckBox').each(function(){
                 $(this).prop('checked', false);
             });
@@ -454,7 +512,7 @@
             }else{
                 $('#btnDel').prop("disabled", true);
                 $('#btnGenBarcode').prop("disabled", true);
-            }   
+            }
 
         });
 
@@ -462,11 +520,11 @@
 
         //Clear Datas
         var datas = '';
-        
+
         //PARENT ID
         var parentId = '';
         var ctr = 1;
-        
+
         $(':checkbox:checked').each(function(){
 
             if(ctr == 45){
@@ -485,7 +543,7 @@
                 ctr++;
             }
 
-            
+
 
         });
 
@@ -493,7 +551,7 @@
             window.open('ajax/reports/book-barcode.php?barcodes='+datas,'_blank');
         //$('#pasteme').append(datas);
         }
-        
+
     });
 
 
@@ -501,11 +559,11 @@
       $(document.body).on('click', '#btnDel', function(){
         $('#qdelete').modal('show');
         $('#viewallbooks').modal('hide');
-        
+
     });
 
-      
-      
+
+
     </script>
 
 </body>

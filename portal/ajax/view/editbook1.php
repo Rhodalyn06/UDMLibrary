@@ -1,7 +1,6 @@
 <?php
 	include_once('../connection.php');
 	$id = $_POST['type'];
-	$sql1 = $conn->query("DELETE FROM hahax");
 	$sql = $conn->query("SELECT * FROM tb_acquisition WHERE AcquisitionId ='$id'");
 
 	$row = $sql->fetch_assoc();
@@ -97,7 +96,7 @@
 	echo "<label style=\"font-size:15px;\">Price</label>";
 	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$price\" disabled/>";
 	echo "</div>";
-	
+
 	echo "<div class=\"form-group\">";
 	echo "<label style=\"font-size:15px;\">Category</label>";
 	echo "<input class=\"form-control\" style=\"width:40%;font-size:15px;\" value=\"$bkcateg\" disabled/>";
