@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Universidad De Manila">
     <link rel="shortcut icon" href="images/udm.jpg">
-     <meta name="author" content=" { Bored Developers } ">
+     <meta name="author" content="">
     
 
     <title>Universidad De Manila</title>
@@ -142,7 +142,7 @@ The founder of the university, Mayor Alfredo Lim, said that the “egalitarian U
         <footer>
             <div class="row">
                 <div class="footer">
-                    <p>Copyright &copy; Bored Developers 2017</p>
+                    <p>Copyright &copy; 2017</p>
                 </div>
             </div>
         </footer>

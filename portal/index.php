@@ -19,15 +19,19 @@
 
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
+
             <div id="page-inner">
                 <?php
                 	include_once('includes/name.php')
                 ?>
                  <!-- /. ROW  -->
                  <hr />
-
-           
-               <img src="img/udm3.png" class="img-responsive" alt="SDSC LOGO" width="50%" height="auto" style="margin-left:250px;border-radius:10px;"> 
+                 <div class="row">
+                    <div class="col-md-12">
+            <img src="img/udm3.png" class="img-responsive" alt="SDSC LOGO" height="auto" style="margin-left:400px;border-radius:10px;"> 
+                </div>
+                        </div>
+              
 
           </div>
              <!-- /. PAGE INNER  -->

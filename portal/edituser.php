@@ -204,7 +204,7 @@
 
         fname = fname.trim();
         lname = lname.trim();
-        if (str.indexOf('LIB')!=-1){
+        if (str.indexOf('000')!=-1){
           if (fname == "" || lname == ""){
             if (fname == "")
             {
@@ -281,7 +281,7 @@
 
         fname = fname.trim();
         lname = lname.trim();
-        if (user.indexOf('LIB')!=-1){
+        if (user.indexOf('000')!=-1){
         //ajax for editing
             $.ajax({
 

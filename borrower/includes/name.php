@@ -4,7 +4,7 @@
 
             <div class="col-md-10">
 
-                 <img src="assets/img/udm.jpg" class="img-responsive" alt="UDM LOGO"  style="margin-left:350px;height:240px;"> 
+            
                 </div>
                 
                 <div class="col-md-12">

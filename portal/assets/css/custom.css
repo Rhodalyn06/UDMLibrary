@@ -18,19 +18,19 @@ body {
 
  #wrapper {
     width: 100%;
-    background:#fff;
+    background:#ffffff;
 }
 
 #page-wrapper {
     padding: 15px 15px;
     min-height: 600px;
-    background:#649173;
+    background:#F3F3F3;
    
 }
 #page-inner {
     width:100%;
     margin:10px 20px 10px 0px;
-    background-color:#649173!important;
+    background-color:##e6e6fa!important;
     padding:10px;
     min-height:1200px;
 }
@@ -39,10 +39,10 @@ body {
     text-align:center;
 }
 .no-boder {
-    border:1px solid #fff;
+    border:1px solid #f3f3f3;
 }
 h2 {
-    color: #33CC33;
+    color: #fff;
 }
 h4 {
     padding-top:10px;
@@ -63,7 +63,7 @@ p {
    DASHBOARD STYLES    
     =============================================*/
 .panel-back {
-    background-color:#649173;
+    background-color:#F8F8F8;
 
 }
    .noti-box {
@@ -142,7 +142,7 @@ font-size: 40px;
       -webkit-border-radius: 0px;
 -moz-border-radius: 0px;
 border-radius: 0px;
-background-color:#649173;
+background-color:#33CC33;
 color:#fff;
 }
     .back-dash p {
@@ -206,7 +206,7 @@ max-width:170px;
 }
 
 .navbar-cls-top .navbar-brand {
-	color: #fff;
+    color: #fff;
 background: #fff;
 width: 260px;
 text-align: center;
@@ -215,7 +215,7 @@ font-size: 30px;
 font-weight: 700;
 }
 .active-menu {
-    background-color:#fff!important;
+    background-color:#00CC00!important;
 }
 
 .arrow {
@@ -244,94 +244,94 @@ font-weight: 700;
     padding-left: 55px;
 }
 .sidebar-collapse , .sidebar-collapse .nav{
-	background:none;
+    background:none;
 }
 .sidebar-collapse .nav {
-	padding:0;
+    padding:0;
 }
 .sidebar-collapse .nav > li > a {
-	color:#000;
-	background:#fff;
-	text-shadow:none;
-	
+    color:#000;
+    background:#ffffff;
+    text-shadow:none;
+    
 }
 .sidebar-collapse > .nav > li > a {
-	padding:15px 10px;
+    padding:15px 10px;
 }
 .sidebar-collapse > .nav > li {
-	border-bottom: 1px solid rgba(107, 108, 109, 0.19);
+    border-bottom: 1px solid rgba(107, 108, 109, 0.19);
 }
 .sidebar-collapse .nav > li > a:hover,
 .sidebar-collapse .nav > li > a:focus {
-	
-	background:#ffffff;
-	outline:0;
+    
+    background:#ffffff;
+    outline:0;
 }
 
 .nav-second-level > li > a:before ,
 .nav-third-level > li > a:before {
-	content:"";
-	display:block;
-	position:absolute;
-	left:20px;
-	width:15px;
-	height:1px;
-	background:#649173;
-	top:20px;
+    content:"";
+    display:block;
+    position:absolute;
+    left:20px;
+    width:15px;
+    height:1px;
+    background:#33CC33;
+    top:20px;
 }
 .nav-second-level > li > a:after,
 .nav-third-level > li > a:after {
-	content:"";
-	display:block;
-	position:absolute;
-	left:20px;
-	width:1px;
-	height:100%;
-	background:#649173;
-	top:0px;
-	z-index:10;
+    content:"";
+    display:block;
+    position:absolute;
+    left:20px;
+    width:1px;
+    height:100%;
+    background:#33CC33;
+    top:0px;
+    z-index:10;
 }
 .nav-second-level  > li:last-child > a:after,
 .nav-third-level  > li:last-child > a:after {
-	height:50%;
+    height:50%;
 }
 .nav-third-level > li > a:after,
 .nav-third-level > li > a:before  {
-	left:40px;
+    left:40px;
 }
 .navbar-side {
-	border:none;
-	background-color: #fff;
-	
+    border:none;
+    background-color: #ffffff;
+    
 }
 .navbar-cls-top {
-	background:#fff;
-	border-bottom:none;
-	
+    background:#ffffff;
+    border-bottom:none;
+    
 }
 .navbar-cls-top .navbar-brand:hover {
 
-background: #649173;
-color:#649173;
+background: #fff;
+color:#fff;
 
 }
 
 .navbar-default {
-border:0px solid #649173;
+border:0px solid black;
      
 }
 .navbar-header {
-    background: #00CC00;
+    background: #fff;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-background-color: #00CC00;
+background-color: #fff;
 }
 .navbar-default .navbar-toggle {
 border-color: #fff;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-background-color: #fff;
+background-color: #FFF;
 }
 .nav > li > a > i {
     margin-right:10px;
@@ -360,10 +360,10 @@ line-height: 1.428571429;
                margin: 0 0 0 260px;
         padding: 15px 30px;
         min-height: 1200px;
-		
+        
     }
-	
-	
+    
+    
     .navbar-side {
         z-index: 1;
         position: absolute;

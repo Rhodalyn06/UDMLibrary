@@ -94,13 +94,7 @@
                         <td><input class="form-control" name="callno" id = "callno" oninput="validateAlphaNumer(this.name)"
       onblur="validateInput('callno', this.value, 'fcallno')" maxlength = 50></td></div>
                     </tr>
-                    <tr>
-                        <td scope="col">
-                           <div class = "form group" id = "faccno">
-                        <strong><span class="style6" style="font-size:18px;">Accession Number: &nbsp;</span></strong></td>
-                        <td><input class="form-control" name="accno" id = "accno" oninput="validateAlphaNumer(this.name)"
-      onblur="validateInput('accno', this.value, 'faccno')" maxlength = 15></td></div>
-                    </tr>
+           
                           <tr>
                         <td scope="col">
                             <div class = "form group" id = "fmethod">
@@ -511,7 +505,6 @@
     var edition = $('#edition').val();
     var publisher = $('#publisher').val();
     var category = $('#category').val();
-    var accno = $('#accno').val();
     var series = $('#series').val();
     var vol = $('#vol').val();
     var placeofpub = $('#placeofpub').val();
@@ -519,7 +512,7 @@
     var notearea = $('#notearea').val();
     var location = $('#location').val();
     if (title==""||fname==""||lname==""||copyright==""||copy==""||callno==""||method=="0"||desc==""||price==""
-      ||isbn==""||edition==""||publisher==""||category=="" || accno == "" || series == "" || vol == "" ||placeofpub == "" || mater == "" ||notearea == "" || location == "")
+      ||isbn==""||edition==""||publisher==""||category=="" || series == "" || vol == "" ||placeofpub == "" || mater == "" ||notearea == "" || location == "")
     {
       validateInput('title', title, 'ftitle');
       validateInput('lastname', lname, 'flastname');
@@ -534,7 +527,6 @@
       validateInput('edition', price, 'fedition');
       validateInput('publisher', publisher, 'fpublisher');
       validateInput('category', category, 'category');
-      validateInput('accno', accno, 'faccno');
       validateInput('series', series, 'fseries');
       validateInput('vol', vol, 'fvol');
       validateInput('placeofpub', placeofpub, 'fplaceofpub');
@@ -553,7 +545,7 @@
         type: 'POST',
         data: {type: title, type1: fname, type2: lname, type3: copyright,
           type4: copy, type5: callno, type6: method, type7: desc, type8: price,
-          type9: isbn, type10: edition, type11: num, type12: publisher, type13: category, type14: accno, type15:series, type16: vol, type17: placeofpub, type18: mater, type19: notearea, type20: location},
+          type9: isbn, type10: edition, type11: num, type12: publisher, type13: category, type14:series, type15: vol, type16: placeofpub, type17: mater, type18: notearea, type19: location},
         success: function(data){
           //$("#e").html(data);
           //alert(data);
@@ -571,7 +563,7 @@
           $('#edition').val("");
           $('#publisher').val("");
           $('#category').val("");
-          $('#accno').val("");
+ 
           $('#series').val("");
           $('#vol').val("");
           $('#placeofpub').val("");
@@ -591,7 +583,7 @@
           validateClear('edition', price, 'fedition');
           validateClear('publisher', publisher, 'fpublisher');
           validateClear('category', publisher, 'fcategory');
-          validateClear('accno', accno, 'faccno');
+          
           validateClear('series', series, 'fseries');
           validateClear('vol', vol, 'fvol');
           validateClear('placeofpub', placeofpub, 'fplaceofpub');
@@ -666,7 +658,7 @@
      document.getElementById("isbn").value = "";
      document.getElementById("edition").value = "";
      document.getElementById("publisher").value = "";
-     document.getElementById("accno").value = "";
+     
      document.getElementById("series").value = "";
      document.getElementById("vol").value = "";
      document.getElementById("placeofpub").value = "";

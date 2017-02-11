@@ -136,7 +136,7 @@
 		displayValue: false,
 		font:"monospace",
 		textAlign:"center",
-		fontSize: 25,
+		fontSize: 12,
 		backgroundColor:"",
 		lineColor:"#000"
 	};

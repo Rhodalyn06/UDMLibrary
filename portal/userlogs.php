@@ -15,11 +15,11 @@
     <div id="wrapper">
         <?php
           include_once('includes/header.php')
-        ?>  
+        ?>
            <!-- /. NAV TOP  -->
         <?php
             include_once('includes/nav.php')
-        ?>  
+        ?>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper">
             <div id="page-inner">
@@ -30,8 +30,8 @@
                  <hr />
 
                 <?php
-                    
-                  
+
+
                     //alerts
                     include_once('modals/contact.php');
                     include_once('modals/allfields.php');
@@ -54,7 +54,7 @@
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="tbllogs">
 
-                                
+
                                     <thead>
                                       <tr>
                                         <th><strong>
@@ -106,18 +106,18 @@
             type: 'POST',
             data: {},
             success: function(data){
-              
+
               $("#f").html(data);
               $('#tbllogs').dataTable();
               //alert(data);
             }
           });
 
-        
+
       }
 
-      
-      
+
+
     </script>
 
 </body>

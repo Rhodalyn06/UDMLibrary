@@ -115,7 +115,7 @@
 		$id = "";
 		$types="";
 		if ($type == 4){
-			$id = "000-";
+			$id = "003";
 			$types="ALUMNI";
 		}
 		else{
