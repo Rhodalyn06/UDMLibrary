@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,7 +20,7 @@
    <!-- TABLE STYLES-->
     <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
 
-    
+
 </head>
 <body>
     <div id="wrapper">
@@ -34,23 +35,23 @@
                                 </li>
                             </ul>
 
-                            
+
             </div>
-        </nav>   
+        </nav>
     </div>
-    
-        
+
+
                 <div class="col-md-12">
                     <div class="col-md-12">
                      <div class="panel-body">
 
                             <div class="tab-content">
                                 <div class="tab-pane active" id="home">
-                         
+
                                     <!-- <img src="images/udm3.png"  width="100%" height="500px;" style="margin-top:50px;border-radius:15px;"> -->
 
                                 <h1 style="color:#fff;text-align:center;margin-top:200px;"> Welcome  </h1>
-                                    
+
                                 </div>
 
 
@@ -58,12 +59,12 @@
                             <div class="tab-pane fade" id="lib">
                                     <div id="login-page">
                                         <div class="container">
-                                            
-                                            <div class="form-login">
-                                            
-                                            <img src="images/udm.jpg" class="img-responsive" alt="UDM LOGO" style="margin-left:20px;width:90%;padding-top:10px;"/> 
 
-                                             
+                                            <div class="form-login">
+
+                                            <img src="images/udm.jpg" class="img-responsive" alt="UDM LOGO" style="margin-left:20px;width:90%;padding-top:10px;"/>
+
+
                                                 <div class="login-wrap">
 
                                                     <div class = "form-group" id = "xx">
@@ -81,7 +82,7 @@
                                                         <!--<label class="checkbox">
                                                             <span class="pull-right">
                                                                 <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
-                                            
+
                                                             </span>
                                                         </label>-->
                                                     <br/>
@@ -89,14 +90,14 @@
                                                     </span>
                                                     <br/>
                                                     <button class="btn btn-theme btn-block" onclick="libLog()"><i class="fa fa-sign-in"></i> LOG IN</button>
-                                                  
 
-                                                        
-                                            
+
+
+
                                                 </div>
-                                        
-                                            </div>       
-                                        
+
+                                            </div>
+
                                         </div>
                                       </div>
 
@@ -105,10 +106,10 @@
 
 
                                 <div class="tab-pane fade" id="admin">
-                                
+
                                     <div class="form-login">
-                                    <img src="images/udm.jpg" class="img-responsive" alt="UDM LOGO" width="300" style="margin-left:20px;width:90%;padding-top:10px;"> 
-                                                
+                                    <img src="images/udm.jpg" class="img-responsive" alt="UDM LOGO" width="300" style="margin-left:20px;width:90%;padding-top:10px;">
+
                                                 <div class="login-wrap">
 
                                                     <div class = "form-group" id = "xx">
@@ -124,7 +125,7 @@
                                                         <!--<label class="checkbox">
                                                             <span class="pull-right">
                                                                 <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
-                                            
+
                                                             </span>
                                                         </label>-->
                                                     <br/>
@@ -132,12 +133,12 @@
                                                     </span>
                                                     <br/>
                                                     <button class="btn btn-theme btn-block" onclick="borLog()"><i class="fa fa-sign-in"></i> LOG IN</button>
-                                           
+
                                                 </div>
                                             </div>
                                 </div>
 
-                                
+
                                 <!-- OPAC TAB -->
                                 <div class="tab-pane fade" id="opac">
                                     <div class = "col-xs-12 row" style = "background: #fff; padding: 12px;">
@@ -146,14 +147,14 @@
                                                 <h2 class="form-login-heading">LOG IN</h2>
                                                 <div class="login-wrap">
 
-                                                        
+
                                                         <input type="text" class="form-control" placeholder="User ID" id = "xluser"
                                                         onpaste="return: false;" autofocus oninput="val('#luser')" onblur="check('#xx', '#luser')">
                                                     </div>
                                                         <!--<label class="checkbox">
                                                             <span class="pull-right">
                                                                 <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
-                                            
+
                                                             </span>
                                                         </label>-->
                                                     <br/>
@@ -161,20 +162,20 @@
                                                     </span>
                                                     <br/>
                                                     <button class="btn btn-theme btn-block" onclick="borLog()"><i class="fa fa-sign-in"></i> LOG IN</button>
-                                                  
-                                                        
-                                            
+
+
+
                                                 </div>
-                                        
+
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
                                 <!-- /OPAC -->
                             </div>
                         </div>
-                       
+
                     </div>
                 </div>
 
@@ -183,7 +184,7 @@
                     include_once('portal/modals/allfields.php');
                 ?>
                  <!-- /. ROW  -->
-            
+
          <!-- /. PAGE WRAPPER  -->
 
      <!-- /. WRAPPER  -->
@@ -196,9 +197,9 @@
     <script src="assets/js/jquery.metisMenu.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
-    
-    
-    
+
+
+
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
     <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
@@ -230,7 +231,7 @@
                 $('#allfields').modal('show');
                 check('#xx', user);
                 check('#xx1', pass);
-                
+
             }
             else{
                 $.ajax({
@@ -265,7 +266,7 @@
                 $('#allfields').modal('show');
                 check('#xx', user);
                 check('#xx1', pass);
-                
+
             }
             else{
                 $.ajax({
@@ -303,7 +304,7 @@
                 $(str).addClass("has-success");
                 $(str).removeClass("has-error");
             }
-            
+
         }
         function val(str){
             var model = $(str).val();
@@ -311,7 +312,7 @@
             var ver = model.charAt(len);
 
             if (/[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789., ]/.test(ver)){
-                
+
             }
             else{
                 if (ver == "-"){
@@ -325,8 +326,8 @@
             }
         }
 
-      
-    </script>   
+
+    </script>
 
     <!-- DATA TABLE SCRIPTS -->
     <script src="assets/js/dataTables/jquery.dataTables.js"></script>

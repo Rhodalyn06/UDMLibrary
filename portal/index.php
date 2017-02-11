@@ -1,21 +1,21 @@
-﻿<!DOCTYPE html>
+<?php
+  include_once('ajax/session.php');
+  include_once('ajax/logout.php');
+?>
+<!DOCTYPE html>
 <head>
-	<?php
-    include_once('ajax/session.php');
-    include_once('ajax/logout.php');
-    include 'includes/style.php'
-	?>
+  <?php include 'includes/style.php' ?>
 </head>
 <body onload="setLink('Home')">
 
 
                 <?php
                   include_once('includes/header.php')
-                ?>  
+                ?>
            <!-- /. NAV TOP  -->
                 <?php
                 	include_once('includes/nav.php')
-                ?>  
+                ?>
 
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
@@ -28,10 +28,10 @@
                  <hr />
                  <div class="row">
                     <div class="col-md-12">
-            <img src="img/udm3.png" class="img-responsive" alt="SDSC LOGO" height="auto" style="margin-left:400px;border-radius:10px;"> 
+            <img src="img/udm3.png" class="img-responsive" alt="SDSC LOGO" height="auto" style="margin-left:400px;border-radius:10px;">
                 </div>
                         </div>
-              
+
 
           </div>
              <!-- /. PAGE INNER  -->
@@ -40,7 +40,7 @@
 
 
          <!-- /. PAGE WRAPPER  -->
-       
+
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
@@ -51,7 +51,7 @@
     <script src="assets/js/jquery.metisMenu.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
-    
-   
+
+
 </body>
 </html>
