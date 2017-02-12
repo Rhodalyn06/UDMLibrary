@@ -39,7 +39,7 @@
 		echo "</div>";
 		echo "</div>";
 
-	
+
 
 
 
@@ -75,7 +75,7 @@
 		echo "<div class = \"col-xs-6\">";
 		echo "<div class =\"form-group\" id =\"middilenamex\">
 				<label style=\"font-size:20px;\">Middle Initial (Optional):</label>
-				<input class =\"form-control\" name = \"Middlename\" 
+				<input class =\"form-control\" name = \"Middlename\"
 				id =\"middilename\" />
 			</div>";
 		echo "</div>";
@@ -92,7 +92,16 @@
 				</div>";
 				echo "</div>";
 		echo "</div>";
-		
+
+		echo "<div class=\"row\">";
+		echo "<div class = \"col-xs-6\">";
+			echo "<div class =\"form-group\" id =\"email_address\">
+					<label style=\"font-size:20px;\">Email:</label>
+					<input class =\"form-control\" name=\"email\" id =\"email\">
+				</div>";
+				echo "</div>";
+		echo "</div>";
+
 
 			echo "<div class=\"row\">";
 		echo "<div class = \"col-xs-6\">";
@@ -115,7 +124,7 @@
 				</div>";
 				echo "</div>";
 		echo "</div>";
-	
+
 
 	}
 
@@ -150,7 +159,7 @@
 		echo "<div class = \"col-xs-6\">";
 		echo "<div class =\"form-group\" id =\"middilenamex\">
 				<label style=\"font-size:20px;\">Middle Initial (Optional):</label>
-				<input class =\"form-control\" name = \"Middlename\" 
+				<input class =\"form-control\" name = \"Middlename\"
 				id =\"middilename\" />
 			</div>";
 		echo "</div>";

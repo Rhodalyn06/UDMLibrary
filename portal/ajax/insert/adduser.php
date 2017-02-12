@@ -5,13 +5,11 @@
 	$fname = ucfirst(trim($_POST['fname']));
 	$lname = ucfirst(trim($_POST['lname']));
 
-	if ($type == 3){
-	
-	$postion = $_POST['postion'];
+	if ($type == 3) {
+		$postion = $_POST['postion'];
 		if ($fname == "" || $lname == "" || $postion == ""){
 			echo "fail";
-		}
-		else{
+		} else {
 			$id = "";
 			$date = date("Y");
 			$sql1 = $conn->query("SELECT * FROM tb_users where UserName like
@@ -52,66 +50,88 @@
 			}
 			echo "done";
 		}
-	}
-	else if ($type != 3 && $type != 4) {
-
+	} else if ($type != 3 && $type != 4) {
 		$address = trim($_POST['address']);
 		$middilename =$_POST['middilename'];
 		$collg = $_POST['collg'];
 		$course = $_POST['course'];
+		$email = $_POST['email'];
 
 		$id = "";
 		$types="";
-		if ($type == 1){
+		if ($type == 1) {
 			$id = "001-";
 			$types="STUDENT";
-		}
-		else{
+		} else {
 			$id = "002-";
 			$types="FACULTY";
 		}
 
 		$date = date("Y");
-			$sql1 = $conn->query("SELECT * FROM tb_borrower where UserID like '" . $id .  $date . "%' ORDER BY UserID DESC");
+			$sql1 = $conn->query("
+				SELECT *
+				FROM tb_borrower
+				WHERE UserID LIKE '" . $id .  $date . "%' ORDER BY UserID DESC
+			");
 
-			if ($sql1){
+			if ($sql1) {
 				if (mysqli_num_rows($sql1)==0){
 					$id = $id . $date . "0001";
-				}else{
-
+				} else {
 					$row = $sql1->fetch_assoc();
 					$x = $row['UserID'];
-
 					$x = str_replace($id, "", $x);
-					
 					$x += 1;
-					
 					$id = $id . $x;
 				}
-			}
-			else{
+			} else {
 				$id = $id . $date . "0001";
 			}
-			//$fname = strtoupper($fname);
-			//$lname = strtoupper($lname);
 
-			$sql = $conn->query("INSERT into tb_borrower (BorrowerID, UserID, Password, FirstName, LastName, Active,
-				BorrowerType, BookOnHand, Address, middilename, colleges, course)
-				VALUES ('null', '$id', '$id', '$fname', '$lname', '0', '$types',  '0',  '$address' , '$middilename', '$collg','$course')");
-			if ($sql){
-				$sql2 = $conn->query("INSERT into tb_accounts(accntID, UserID, UserType, Password)
-					VALUES('null', '$id', 'tb_borrower', '$id')");
+			$sql = $conn->query("
+				INSERT into tb_borrower (
+					BorrowerID,
+					UserID,
+					Password,
+					FirstName,
+					LastName,
+					Active,
+					BorrowerType,
+					BookOnHand,
+					Address,
+					email,
+					middilename,
+					colleges,
+					course
+				) VALUES (
+					'null',
+					'$id',
+					'$id',
+					'$fname',
+					'$lname',
+					'0',
+					'$types',
+					'0',
+					'$address',
+					'$email',
+					'$middilename',
+					'$collg',
+					'$course'
+				)
+			");
+			if ($sql) {
+				$sql2 = $conn->query("
+					INSERT into tb_accounts (
+						accntID, UserID, UserType, Password
+					) VALUES(
+						'null', '$id', 'tb_borrower', '$id'
+					)
+				");
 			}
 			echo "done";
 
-	}
-	else if ($type != 3) {
-
-
-		
+	} else if ($type != 3) {
 		$middilename =$_POST['middilename'];
-	
-
 		$id = "";
 		$types="";
 		if ($type == 4){
@@ -134,9 +154,9 @@
 					$x = $row['UserID'];
 
 					$x = str_replace($id, "", $x);
-					
+
 					$x += 1;
-					
+
 					$id = $id . $x;
 				}
 			}
@@ -146,7 +166,7 @@
 			//$fname = strtoupper($fname);
 			//$lname = strtoupper($lname);
 
-			$sql = $conn->query("INSERT into tb_alumni (BorrowerID, UserID, FirstName, LastName, 
+			$sql = $conn->query("INSERT into tb_alumni (BorrowerID, UserID, FirstName, LastName,
 				 middilename, password, BorrowerType)
 				VALUES ('null', '$id', '$fname', '$lname', '$middilename', '$id', '$types')");
 			if ($sql){

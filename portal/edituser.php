@@ -15,11 +15,11 @@
     <div id="wrapper">
         <?php
           include_once('includes/header.php')
-        ?>  
+        ?>
            <!-- /. NAV TOP  -->
         <?php
             include_once('includes/nav.php')
-        ?>  
+        ?>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper">
             <div id="page-inner">
@@ -31,7 +31,7 @@
 
                 <?php
                     //include_once('forms/edituser.php');
-                    
+
                     include_once('modals/viewuser.php');
 
                     include_once('modals/edituser.php');
@@ -45,8 +45,8 @@
                     include_once('modals/supdate.php');
                 ?>
 
-                
-              
+
+
                 <div class = "form-group">
                   <select class = "form-control" style="height:50px; width: 50%;" onchange="viewDetails(this.value)">
                     <option value = "0" hidden>Choose One</option>
@@ -224,18 +224,19 @@
 
         }
         else{
-        
+
           var borrowertype = document.getElementsByName('btype')[0].value;
           var address = document.getElementsByName('address')[0].value;
-        
+
 
           var middilename = document.getElementsByName('middilename')[0].value;
+          var email = document.getElementsByName('email')[0].value;
 
-          
+
           borrowertype = borrowertype.trim();
           address = address.trim();
-          
-             
+
+
           middilename = middilename.trim();
 
           if (fname == "" || lname == "" || borrowertype == "" || address == "" ||  middilename == "" )
@@ -248,7 +249,7 @@
             {
               check(lname, '#lname');
             }
-           
+
             if (borrowertype == "")
             {
               check(borrowertype, '#btype');
@@ -257,7 +258,7 @@
             {
               check(address, '#address');
             }
-            
+
             if (middilename == "")
             {
               check(middilename, '#middilename');
@@ -281,7 +282,7 @@
 
         fname = fname.trim();
         lname = lname.trim();
-        if (user.indexOf('000')!=-1){
+        if (user.substring(0, 3) == '000') {
         //ajax for editing
             $.ajax({
 
@@ -295,13 +296,13 @@
                 //alert(data);
               }
             });
-        }
-        else{
+        } else {
           var borrowertype = document.getElementsByName('btype')[0].value;
           var address = document.getElementsByName('address')[0].value;
-          
-          var middilename = document.getElementsByName('middilename')[0].value;
 
+          var middilename = document.getElementsByName('middilename')[0].value;
+          var email = document.getElementsByName('email')[0].value;
+          console.log(email);
 
           borrowertype = borrowertype.trim();
           address = address.trim();
@@ -312,8 +313,16 @@
 
               url: "ajax/update/edituser.php",
               type: 'POST',
-              data: {type: user, type1: fname, type2: lname, type3: '2', type4: borrowertype, 
-                      type5:address,  type6: middilename},
+              data: {
+                'type': user,
+                'type1': fname,
+                'type2': lname,
+                'type3': '2',
+                'type4': borrowertype,
+                'type5':address,
+                'type6': middilename,
+                'email': email
+              },
               success: function(data){
                 //$("#d").html(data);
                 $('#qupdate').modal('hide');
@@ -374,16 +383,16 @@
         }
         viewDetails(typehaha);
 
-        
+
       }
       function dNo(){
-        
+
 
         $('#view').modal('show');
         $('#qdelete').modal('hide');
       }
 
-      
+
     </script>
 
 </body>

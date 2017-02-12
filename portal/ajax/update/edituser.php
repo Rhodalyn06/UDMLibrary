@@ -7,19 +7,25 @@
 	$type = $_POST['type3'];
 
 	if ($type == "1"){
-		$sql=$conn->query("UPDATE tb_users SET FirstName='$fname', 
+		$sql=$conn->query("UPDATE tb_users SET FirstName='$fname',
 			 LastName='$lname' WHERE UserName='$userid'");
 	}
 	else if ($type=="2"){
 		$btype = $_POST['type4'];
 		$address = $_POST['type5'];
-	
+
 		$middilename = $_POST['type6'];
-		$sql=$conn->query("UPDATE tb_borrower SET FirstName='$fname',
-												  LastName='$lname',
-												  BorrowerType='$btype',
-												  Address='$address',
-												  middilename = '$middilename'
-												  WHERE UserID='$userid'");
+		$email = $_POST['email'];
+		$sql=$conn->query("
+			UPDATE tb_borrower
+			SET
+				FirstName='$fname',
+				LastName='$lname',
+			 	BorrowerType='$btype',
+			 	Address='$address',
+			 	middilename = '$middilename',
+			 	email = '$email'
+			WHERE UserID='$userid'
+		");
 	}
 ?>

@@ -6,7 +6,7 @@
 		<option value = "1"> Student </option>
 		<option value = "2"> Faculty </option>
     <option value = "4"> Alumni </option>
-    
+
 	</select>
 </div>
 
@@ -19,7 +19,7 @@
   <div class="col-md-3">
       <button  class="btn btn-default btn-block" style="width:45%;font-size:20px;" onclick = "save()">Add User</button>
   </div>
-    
+
 
     <div class="col-md-3">
         <button class="btn btn-default btn-block" type="button" style="width:40%;font-size:20px;" onclick="ClearFields();">Cancel</button>
@@ -46,18 +46,17 @@
 
  function save(){
     var type = $('#type').val();
-    if (type == 0){
+    if (type == 0) {
       $('#typex').addClass('has-error');
       $('#typex').removeClass('has-success');
-    }
-    else{
+    } else {
       $('#typex').addClass('has-success');
       $('#typex').removeClass('has-error');
-      if (type==3){
+      if (type==3) {
         var fname = $('#fname').val();
         var lname = $('#lname').val();
         var postion = $('#postion').val();
-       
+
 
         validateInput('fname', fname, 'fnamex');
         validateInput('lname', lname, 'lnamex');
@@ -66,76 +65,74 @@
         if (fname == "" || lname == "" || postion == ""){
           //modal
           $('#allfields').modal('show');
-        }
-        else{
+        } else {
           $.ajax({
-
             url: "ajax/insert/adduser.php",
             type: 'POST',
-            data: {type: type, fname: fname, lname: lname,middilename: middilename, postion: postion},
-            success: function(data){
-              //$("#a").html(data);
-              if (data=="done"){
-                
+            data: {
+              type: type,
+              fname: fname,
+              lname: lname,
+              middilename: middilename,
+              postion: postion
+            },
+            success: function(data) {
+              if (data=="done") {
                 $('#success').modal('show');
-                //$('#auser').modal('hide');
-                
                 document.getElementById('type').selectedIndex=0;
                 viewDetails('0');
-              }
-              else{
+              } else {
                 alert(data);
               }
             }
           });
         }
-      }
-
-
-      else if(type!=3){
+      } else if(type!=3) {
         var fname = $('#fname').val();
         var lname = $('#lname').val();
-
-       
 
         validateInput('fname', fname, 'fnamex');
         validateInput('lname', lname, 'lnamex');
 
         if (fname == "" || lname == "" ){
-          //modal
           $('#allfields').modal('show');
         }
+
         var fname = $('#fname').val();
         var lname = $('#lname').val();
 
-      
-     
         var address = $('#add').val();
+        var email = $('#email').val();
         var middilename  = $('#middilename').val();
         var collg = $('#collg').val();
         var course = $('#course').val();
 
-       
         validateInput('add', address, 'addx');
         validateInput('fname', fname, 'fnamex');
         validateInput('lname', lname, 'lnamex');
-      
+
         validateInput('collg', collg, 'collgx');
         validateInput('course', course, 'coursex');
-        if (fname == "" || lname == "" || address == "" ||  collg == "" || course == ""){
-          //modal
-        }
-        else{
-            $.ajax({
 
+        if (fname == "" || lname == "" || address == "" ||  collg == "" || course == "") {
+          //modal
+        } else {
+          $.ajax({
             url: "ajax/insert/adduser.php",
             type: 'POST',
-            data: {type: type, fname: fname, lname: lname, address: address, middilename:middilename, collg:collg, course:course},
+            data: {
+              type: type,
+              fname: fname,
+              lname: lname,
+              address: address,
+              email: email,
+              middilename:middilename,
+              collg:collg,
+              course:course
+            },
             success: function(data){
-              //$("#a").html(data);
               if (data=="done"){
                 $('#success').modal('show');
-                //$('#auser').modal('hide');
                 document.getElementById('type').selectedIndex=0;
                 viewDetails('0');
               }
@@ -145,8 +142,7 @@
             }
           });
         }
-      }
-      else if(type==4){
+      } else if(type==4) {
         var fname = $('#fname').val();
         var lname = $('#lname').val();
         var middilename  = $('#middilename').val();
@@ -157,10 +153,8 @@
         if (fname == "" || lname == ""){
           //modal
           $('#allfields').modal('show');
-        }
-        else{
-            $.ajax({
-
+        } else {
+          $.ajax({
             url: "ajax/insert/adduser.php",
             type: 'POST',
             data: {type: type, fname: fname, lname: lname,  middilename:middilename},
@@ -179,16 +173,10 @@
           });
         }
       }
-
-
-         
     }
   }
 
-
-
   function closes(){
-    
     $('#addalert').modal('hide');
     $('#auser').modal('hide');
   }
@@ -217,12 +205,10 @@
       $('#'+str).val(str1);
       $('#'+str2).addClass('has-error');
       $('#'+str2).removeClass('has-success');
-    }
-    else{
+    } else {
       $('#'+str).val(str1);
       $('#'+str2).addClass('has-success');
       $('#'+str2).removeClass('has-error');
-
     }
   }
 

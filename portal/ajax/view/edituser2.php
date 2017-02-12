@@ -55,12 +55,13 @@
 		$row = $sql->fetch_assoc();
 		$userid = $row['UserID'];
 		$fname = $row['FirstName'];
-		
+
 		$lname = $row['LastName'];
 		$BorrowerType = $row['BorrowerType'];
 		$Address = $row['Address'];
 		$middilename = $row['middilename'];
-		
+		$email = $row['email'];
+
 
 		echo "<div class=\"form-group\" id = \"userids\">";
 		echo "<label style=\"font-size:15px;\">User ID</label>";
@@ -74,13 +75,13 @@
 		oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, '#fname')\">";
 		echo "</div>";
 
-		
+
 		echo "<div class=\"form-group\" id = \"middilename\">";
 		echo "<label style=\"font-size:15px;\">Middle Initial (Optional)</label>";
 		echo "<input class = \"form-control\" value=\"$middilename\" name=\"middilename\"
 		oninput =\"validateLetters(this.name)\" onblur=\"check(this.value, '#middilename')\">";
 		echo "</div>";
-		
+
 
 		echo "<div class=\"form-group\" id = \"lname\">";
 		echo "<label style=\"font-size:15px;\">Last Name</label>";
@@ -109,6 +110,11 @@
 		echo "<label style=\"font-size:15px;\">Address</label>";
 		echo "<input class = \"form-control\" value=\"$Address\" name=\"address\"
 		oninput =\"validateAlphaNumer(this.name)\" onblur=\"check(this.value, '#address')\">";
+		echo "</div>";
+
+		echo "<div class=\"form-group\" id= \"email\">";
+		echo "<label style=\"font-size:15px;\">Email</label>";
+		echo "<input class = \"form-control\" value=\"$email\" name=\"email\" onblur=\"check(this.value, '#email')\">";
 		echo "</div>";
 
 

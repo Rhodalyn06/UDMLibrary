@@ -46,7 +46,8 @@
 
 		$Address = $row['Address'];
 		$middilename = $row['middilename'];
-		
+		$email = $row['email'];
+
 		echo "<div class=\"form-group\">";
 		echo "<label style=\"font-size:15px;\">User ID</label>";
 		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" id = 'userid' value=\"$userid\" disabled>";
@@ -68,7 +69,7 @@
 		echo "<label style=\"font-size:15px;\">Middle Initial (Optional)</label>";
 		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$middilename\" disabled>";
 		echo "</div>";
-		
+
 		echo "<div class=\"form-group\">";
 		echo "<label style=\"font-size:15px;\">Last Name</label>";
 		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$lname\" disabled>";
@@ -85,8 +86,13 @@
 		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$Address\" disabled>";
 		echo "</div>";
 
-		
-		
+		echo "<div class=\"form-group\">";
+		echo "<label style=\"font-size:15px;\">Email</label>";
+		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$email\" disabled>";
+		echo "</div>";
+
+
+
 
 
 	}
@@ -99,9 +105,9 @@
 		$fname = $row['FirstName'];
 		$pasx = $row['password'];
 		$lname = $row['LastName'];
-	
+
 		$middilename = $row['middilename'];
-		
+
 		echo "<div class=\"form-group\">";
 		echo "<label style=\"font-size:15px;\">User ID</label>";
 		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" id = 'userid' value=\"$userid\" disabled>";
@@ -116,7 +122,7 @@
 		echo "<label style=\"font-size:15px;\">Middle Initial (Optional)</label>";
 		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$middilename\" disabled>";
 		echo "</div>";
-		
+
 		echo "<div class=\"form-group\">";
 		echo "<label style=\"font-size:15px;\">Last Name</label>";
 		echo "<input class = \"form-control\" style=\"width:40%;font-size:15px;\" value=\"$lname\" disabled>";
@@ -128,11 +134,11 @@
 		echo "</div>";
 
 
-	
 
 
-		
-		
+
+
+
 
 
 	}
