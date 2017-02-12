@@ -17,13 +17,13 @@ if (!$result) {
 }
 
 $message = <<<EOT
-Good day %s!
+<p>Good day %s!</p>
 
-We would like to remind you that the book <i>"%s" by %s</i> that you borrowed from the UDM Library is %s overdue.
+<p>We would like to remind you that the book <i>"%s" by %s</i> you borrowed from the UDM Library is %s overdue.</p>
 
-To avoid larger penalties for late returns, please return the book as soon as possible.
+<p>To avoid larger penalties for late returns, please return the book as soon as possible.</p>
 
-Thank you!
+<p>Thank you!</p>
 EOT;
 
 $headers = "From: UDM Library <no-reply@udmlibrary.com>\r\n";
